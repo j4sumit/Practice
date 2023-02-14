@@ -9,11 +9,3 @@ function reverse (){
 
 console.log(reverse());
 
-// function Reverse(){
-//     var string ="India is my country";
-//     var result="";
-//     for( var i=string.length-1; i>=0 ; i-- ) {
-//        result=result+string[i] }
-//     return result
-//  }
-//  console.log(Reverse())
