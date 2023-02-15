@@ -1,6 +1,6 @@
 function revesewithoutmethod()
 {
-    var String = "My Name is string";
+    var String = "My Name is Sumit";
     var r='';
     var w='';
     for (let c of String)
@@ -8,6 +8,7 @@ function revesewithoutmethod()
 if(c == '')
 {
     r = r + w+ c;
+    
     w= '';
 }
 else{
