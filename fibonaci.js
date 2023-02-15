@@ -26,8 +26,8 @@ let limit = 5;
 	for (var i = 0; i < limit; i++) {
 		console.log(n1);
 		n1  = n1+n2;
-               n2  = sum;
-               sum = n1;
+         n2  = sum;
+        sum = n1;
 
         
 		
