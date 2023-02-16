@@ -1,17 +1,35 @@
-function longestword()
+// function longestword()
+// {
+// let name = "My name is sumit chaurasiya currentlyyy persuing frontend trainging from soal";
+// var words = name.split(' ');
+// var longest = "";
+// for( let word of words)
+// {
+//     if (word.length> longest.length)
+//     {
+//         longest =word;
+//     }
+// }
+
+// return longest;
+// }
+
+// console.log(longestword());
+
+function smallestword()
 {
-let name = "My name is sumit chaurasiya currentlyyy persuing frontend trainging from soal";
+let name = "Myyy name isss sumit chaurasiya currentlyyy persuing frontend trainging from soal ok";
 var words = name.split(' ');
-var longest = "";
+var smallest = words[5];
 for( let word of words)
 {
-    if (word.length> longest.length)
+    if (word.length< smallest.length)
     {
-        longest =word;
+        smallest =word;
     }
 }
 
-return longest;
+return smallest;
 }
 
-console.log(longestword());
+console.log(smallestword());
