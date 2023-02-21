@@ -5,5 +5,5 @@ console.log(num);
 return num[0]+num[1];
 }
 
-const result = largestpairsum([9,7,8,4,5,6,1,2,3]);
+const result = largestpairsum([9,7,15,11,8,4,5,6,1,2,3]);
 console.log(result);

@@ -12,7 +12,7 @@ for (let i of string.toLowerCase())
         console.log(i);
         
     }
-}
+} 
 return count;
 }
 
