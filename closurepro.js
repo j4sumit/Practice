@@ -22,3 +22,19 @@ outer()(); //  here first `()` will return inner function and then using secong`
 
 // var result = outer();
 // console.log(result());
+
+
+
+function outer(b)
+{
+    var a = 10;
+    function inner ()
+    {
+        console.log (`returing fron inner ${a+b}`);
+    }
+        return inner;
+}
+
+outer(15)();
+
+
