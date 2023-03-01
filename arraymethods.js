@@ -4,8 +4,23 @@
 //  console.log(confirmEnding("priya","a"))
  
 
- function repeatStrinNumTimes(str, num){
-    if (num<1) return ""
-    return str.repeat(num)
-    }
-    console.log(repeatStrinNumTimes("Sumit ",3))
+//  function repeatStrinNumTimes(str, num){
+//     if (num<1) return "";
+//     return str.repeat(num)
+//     }
+//     console.log(repeatStrinNumTimes("Sumit ",5))
+
+
+    // Print string n times in custom way
+    function repeatStr(str, num){
+if(num<=0) 
+return "kindly share exact number of element";
+var res ="";
+for(let i=0;i<num;i++)
+{
+   res = str + res;
+}
+ return res;
+  }
+
+  console.log(repeatStr("Sumit ", 6));
