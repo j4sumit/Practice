@@ -6,7 +6,9 @@ function sortByParity(arr){
       
           arr[i]%2 ===0 ? even.push(arr[i]) : odd.push(arr[i]);
     }
-   result = even.concat(odd)
+    console.log(even);
+    console.log(odd);
+   result = even.concat(odd);
    return result
    }
 
