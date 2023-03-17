@@ -2,15 +2,35 @@
 
 // Return the array in the form [x1,y1,x2,y2,...,xn,yn].
 
-function shuffle(nums, n)
+// function shuffle(nums, n)
+// {
+// let newarr =[];
+// for(let i=0; i<n; i++)
+// {
+//     newarr.push(nums[i]);
+//     newarr.push(nums[i+n]);
+// }
+// return newarr;
+// }
+
+// console.log(shuffle([2,5,1,3,4,7], 3));
+
+//******************************************************************** */
+
+function Varoperation(operation)
 {
-let newarr =[];
-for(let i=0; i<n; i++)
+    let val=0;
+for(let i=0; i<operation.length; i++)
 {
-    newarr.push(nums[i]);
-    newarr.push(nums[i+n]);
+    if(operation[i][1] == '+')
+{
+    val = val+1;
 }
-return newarr;
+else{
+    val= val-1;
+}
+}
+return val;
 }
 
-console.log(shuffle([2,5,1,3,4,7], 3));
+console.log(Varoperation(["++X","++X","X++"]));
