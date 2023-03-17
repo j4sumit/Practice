@@ -65,19 +65,49 @@
 // Output: 4
 // Explanation: There are 4 good pairs (0,3), (0,4), (3,4), (2,5) 0-indexed.
 
-function Goodpairs(nums) {
-    let count=0;
-    for(let i=0; i<nums.length;i++)
-    {
-        for(let j=1;j<nums.length;j++)
-        {
-            if(nums[i]==nums[j] & (i<j))
-            {
-                count=count+1;
-            }
-        }
-    }
-    return count;
-};
+// function Goodpairs(nums) {
+//     let count=0;
+//     for(let i=0; i<nums.length;i++)
+//     {
+//         for(let j=1;j<nums.length;j++)
+//         {
+//             if(nums[i]==nums[j] & (i<j))
+//             {
+//                 count=count+1;
+//             }
+//         }
+//     }
+//     return count;
+// };
 
-console.log(Goodpairs([1,2,3,1,1,3]));
+// console.log(Goodpairs([1,2,3,1,1,3]));
+
+
+// . Richest Customer Wealth
+// Input: accounts = [[1,2,3],[3,2,1]]
+// Output: 6
+// Explanation:
+// 1st customer has wealth = 1 + 2 + 3 = 6
+// 2nd customer has wealth = 3 + 2 + 1 = 6
+// Both customers are considered the richest with a wealth of 6 each, so return 6.
+
+function maxsumofsubarray(accounts) {
+    let sum=0;
+    let final=[];
+    for(let i=0;i<accounts.length; i++)
+    {
+        for(let j=0;j<accounts[i].length; j++)
+    {
+sum= sum + accounts[i][j];
+
+    }
+        final.push(sum);
+        sum=0;
+    }
+
+    final.sort((a,b) => a-b);
+    return final[final.length-1];
+
+}
+
+console.log(maxsumofsubarray([[1,5], [7,3],[3,5]]));
