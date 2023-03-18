@@ -113,19 +113,43 @@
 // console.log(maxsumofsubarray([[1,5], [7,3],[3,5]]));
 
 
-function Sumarr(nums) {
+// function Sumarr(nums) {
+//     let res =[];
+//     let sum=0;
+//     for(let i=0; i<nums.length; i++)
+//     {
+// for(let j=0; j<=i; j++)
+// {
+//     sum=sum+nums[j];
+// }
+// res.push(sum);
+// sum=0;
+//     }
+//     return res;
+// };
+
+// console.log(Sumarr([1,2,3,4]));
+
+
+function sum (candies, extraCandies) {
+       let newarr =[];
     let res =[];
-    let sum=0;
-    for(let i=0; i<nums.length; i++)
+    for(let i=0;i<candies.length; i++)
     {
-for(let j=0; j<=i; j++)
-{
-    sum=sum+nums[j];
-}
-res.push(sum);
-sum=0;
+        
+newarr.push(candies[i]+extraCandies);
+
+         }
+console.log(newarr);   
+    for(let j=0; j<newarr.length; j++)
+    {
+        if(newarr[j]>= Math.max(...candies))
+        {
+            res.push(true);
+         }
+         else
+         { res.push(false);}
     }
     return res;
-};
-
-console.log(Sumarr([1,2,3,4]));
+} 
+console.log(sum([4,2,1,1,2],1));
