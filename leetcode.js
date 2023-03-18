@@ -91,23 +91,41 @@
 // 2nd customer has wealth = 3 + 2 + 1 = 6
 // Both customers are considered the richest with a wealth of 6 each, so return 6.
 
-function maxsumofsubarray(accounts) {
+// function maxsumofsubarray(accounts) {
+//     let sum=0;
+//     let final=[];
+//     for(let i=0;i<accounts.length; i++)
+//     {
+//         for(let j=0;j<accounts[i].length; j++)
+//     {
+// sum= sum + accounts[i][j];
+
+//     }
+//         final.push(sum);
+//         sum=0;
+//     }
+
+//     final.sort((a,b) => a-b);
+//     return final[final.length-1];
+
+// }
+
+// console.log(maxsumofsubarray([[1,5], [7,3],[3,5]]));
+
+
+function Sumarr(nums) {
+    let res =[];
     let sum=0;
-    let final=[];
-    for(let i=0;i<accounts.length; i++)
+    for(let i=0; i<nums.length; i++)
     {
-        for(let j=0;j<accounts[i].length; j++)
-    {
-sum= sum + accounts[i][j];
-
-    }
-        final.push(sum);
-        sum=0;
-    }
-
-    final.sort((a,b) => a-b);
-    return final[final.length-1];
-
+for(let j=0; j<=i; j++)
+{
+    sum=sum+nums[j];
 }
+res.push(sum);
+sum=0;
+    }
+    return res;
+};
 
-console.log(maxsumofsubarray([[1,5], [7,3],[3,5]]));
+console.log(Sumarr([1,2,3,4]));
