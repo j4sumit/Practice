@@ -205,18 +205,50 @@
 
 // console.log(smallerNumbersThanCurrent([8,1,2,2,3]));
 
- function decompressRLElist(nums) {
-  let res=[];
+//  function decompressRLElist(nums) {
+//   let res=[];
   
-  for(let i=0; i<nums.length; i=i+2)
+//   for(let i=0; i<nums.length; i=i+2)
+//   {
+// for(let j=0; j<nums[i];j++)
+// {
+//   res.push(nums[i+1]);
+// }
+//   }
+//   return res;
+
+// };
+
+// console.log(decompressRLElist([1,2,3,4]));
+
+// 2535. Difference Between Element Sum and Digit Sum of an Array
+// Input: nums = [1,15,6,3]
+// Output: 9
+// Explanation: 
+// The element sum of nums is 1 + 15 + 6 + 3 = 25.
+// The digit sum of nums is 1 + 1 + 5 + 6 + 3 = 16.
+// The absolute difference between the element sum and digit sum is |25 - 16| = 9.
+
+function differenceOfSum(nums) {
+  let snum=0;
+  let sum=0;
+  let res=0;
+  for(let i=0; i<nums.length; i++)
   {
-for(let j=0; j<nums[i];j++)
-{
-  res.push(nums[i+1]);
+      snum=snum+nums[i];
+      }
+for(let num of nums)
+{   while (num>0) {
+          sum += num % 10;
+          num = Math.floor(num / 10);
+      }
 }
-  }
-  return res;
 
-};
+console.log(sum);
+console.log(snum);
+res = snum-sum;
+return res;
+}
 
-console.log(decompressRLElist([1,2,3,4]));
+console.log(differenceOfSum([1,15,6,3]));
+
