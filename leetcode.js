@@ -131,25 +131,92 @@
 // console.log(Sumarr([1,2,3,4]));
 
 
-function sum (candies, extraCandies) {
-       let newarr =[];
-    let res =[];
-    for(let i=0;i<candies.length; i++)
-    {
+// function sum (candies, extraCandies) {
+//        let newarr =[];
+//     let res =[];
+//     for(let i=0;i<candies.length; i++)
+//     {
         
-newarr.push(candies[i]+extraCandies);
+// newarr.push(candies[i]+extraCandies);
 
-         }
-console.log(newarr);   
-    for(let j=0; j<newarr.length; j++)
-    {
-        if(newarr[j]>= Math.max(...candies))
-        {
-            res.push(true);
-         }
-         else
-         { res.push(false);}
-    }
-    return res;
-} 
-console.log(sum([4,2,1,1,2],1));
+//          }
+//     for(let j=0; j<newarr.length; j++)
+//     {
+//         if(newarr[j]>= Math.max(...candies))
+//         {
+//             res.push(true);
+//          }
+//          else
+//          { res.push(false);}
+//     }
+//     return res;
+// } 
+// console.log(sum([4,2,1,1,2],1));
+
+// 2114. Maximum Number of Words Found in Sentences
+// Input: sentences = ["alice and bob love leetcode", "i think so too", "this is great thanks very much"]
+// Output: 6
+// Explanation: 
+// - The first sentence, "alice and bob love leetcode", has 5 words in total.
+// - The second sentence, "i think so too", has 4 words in total.
+// - The third sentence, "this is great thanks very much", has 6 words in total.
+// Thus, the maximum number of words in a single sentence comes from the third sentence, which has 6 words.
+
+// function mostWordsFound(sentences) {
+    
+//     let count=0;
+//     for(let i=0; i<sentences.length; i++)
+//     {
+//       let len =sentences[i].split(' ').length;
+//       if(len>count)
+//       {
+//         count = len;
+//       }
+//     }
+//     return count;
+
+// }
+
+// console.log(mostWordsFound(["alice and bob love leetcode", "i think so too", "this is great thanks very much"]));
+
+// 1365. How Many Numbers Are Smaller Than the Current Number
+// Given the array nums, for each nums[i] find out how many numbers in the array are smaller than it. That is, for each nums[i] you have to count the number of valid j's such that j != i and nums[j] < nums[i].
+// Input: nums = [8,1,2,2,3]
+// Output: [4,0,1,1,3]
+
+// function smallerNumbersThanCurrent(nums) {
+//   let newarr=[];
+//   let count=0;
+// for(let i=0;i<nums.length; i++)
+// {
+//   for(let j=0; j<nums.length; j++)
+//   {
+//       if(nums[i]>nums[j])
+//       {
+//           count++;
+//       }
+      
+//    }
+//    newarr.push(count);
+//    count=0;
+// }
+// return newarr;
+// }
+
+// console.log(smallerNumbersThanCurrent([8,1,2,2,3]));
+
+ function decompressRLElist(nums) {
+  let res=[];
+  
+  for(let i=0; i<nums.length; i=i+2)
+  {
+for(let j=0; j<nums[i];j++)
+{
+  res.push(nums[i+1]);
+}
+  }
+  return res;
+
+};
+
+console.log(decompressRLElist([1,2,3,4]));
