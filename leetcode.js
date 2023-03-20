@@ -281,12 +281,49 @@
 // (1, 2, 4) is an arithmetic triplet because both 7 - 4 == 3 and 4 - 1 == 3.
 // (2, 4, 5) is an arithmetic triplet because both 10 - 7 == 3 and 7 - 4 == 3.
 
-function arithmeticTriplets(nums, diff) {
-  let count = 0;
-      for ( let num of nums)
-          if (nums.includes(num + diff) && nums.includes(num + diff*2))
-              count += 1;
-      return count
+// function arithmeticTriplets(nums, diff) {
+//   let count = 0;
+//       for ( let num of nums)
+//           if (nums.includes(num + diff) && nums.includes(num + diff*2))
+//               count += 1;
+//       return count
+// }
+
+// console.log(arithmeticTriplets([4,5,6,7,8,9],2))
+
+// 1662. Check If Two String Arrays are Equivalent
+// Given two string arrays word1 and word2, return true if the two arrays represent the same string, and false otherwise.
+// A string is represented by an array if the array elements concatenated in order forms the string.
+
+// Input: word1 = ["ab", "c"], word2 = ["a", "bc"]
+// Output: true
+// Explanation:
+// word1 represents string "ab" + "c" -> "abc"
+// word2 represents string "a" + "bc" -> "abc"
+// The strings are the same, so return true.
+
+
+function arrayStringsAreEqual(word1, word2) {
+  let word11= word1.sort((a,b)=>a-b);
+  let word22 = word2.sort((a,b)=>a-b);
+  let str1='';
+  let str2='';
+  for(let i=0; i<word11.length;i++)
+  {
+      str1=str1+word11[i];
+  }
+  for(let j=0; j<word22.length; j++)
+  {
+      str2= str2+word22[j];
+  }
+if(str1.toLowerCase() === str2.toLowerCase())
+{
+  return true;
+}
+else{
+  return false;
 }
 
-console.log(arithmeticTriplets([4,5,6,7,8,9],2))
+}
+
+console.log(arrayStringsAreEqual(["a", "cb"], ["ab", "c"]))
