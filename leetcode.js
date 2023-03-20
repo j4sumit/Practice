@@ -229,26 +229,64 @@
 // The digit sum of nums is 1 + 1 + 5 + 6 + 3 = 16.
 // The absolute difference between the element sum and digit sum is |25 - 16| = 9.
 
-function differenceOfSum(nums) {
-  let snum=0;
-  let sum=0;
-  let res=0;
-  for(let i=0; i<nums.length; i++)
-  {
-      snum=snum+nums[i];
-      }
-for(let num of nums)
-{   while (num>0) {
-          sum += num % 10;
-          num = Math.floor(num / 10);
-      }
+// function differenceOfSum(nums) {
+//   let snum=0;
+//   let sum=0;
+//   let res=0;
+//   for(let i=0; i<nums.length; i++)
+//   {
+//       snum=snum+nums[i];
+//       }
+// for(let num of nums)
+// {   while (num>0) {
+//           sum += num % 10;
+//           num = Math.floor(num / 10);
+//       }
+// }
+
+// console.log(sum);
+// console.log(snum);
+// res = snum-sum;
+// return res;
+// }
+
+// console.log(differenceOfSum([1,15,6,3]));
+
+// 1528. Shuffle String
+// You are given a string s and an integer array indices of the same length. The string s will be shuffled such that the character at the ith position moves to indices[i] in the shuffled string.
+// Return the shuffled string.
+
+// Input: s = "codeleet", indices = [4,5,6,7,0,2,1,3]
+// Output: "leetcode"
+// Explanation: As shown, "codeleet" becomes "leetcode" after shuffling.
+
+// function restoreString(s, indices) {
+//   let newstr=[];
+  
+// for(let i=0; i<indices.length; i++)
+// {
+// newstr[indices[i]]=s[i];
+// }
+// let arrtostr= newstr.join('');
+// return arrtostr;
+// };
+
+// console.log(restoreString([4,5,6,7,0,2,1,3]));
+
+// 2367. Number of Arithmetic Triplets
+// You are given a 0-indexed, strictly increasing integer array nums and a positive integer diff. A triplet (i, j, k) is an arithmetic triplet if the following conditions are met:
+// Input: nums = [0,1,4,6,7,10], diff = 3
+// Output: 2
+// Explanation:
+// (1, 2, 4) is an arithmetic triplet because both 7 - 4 == 3 and 4 - 1 == 3.
+// (2, 4, 5) is an arithmetic triplet because both 10 - 7 == 3 and 7 - 4 == 3.
+
+function arithmeticTriplets(nums, diff) {
+  let count = 0;
+      for ( let num of nums)
+          if (nums.includes(num + diff) && nums.includes(num + diff*2))
+              count += 1;
+      return count
 }
 
-console.log(sum);
-console.log(snum);
-res = snum-sum;
-return res;
-}
-
-console.log(differenceOfSum([1,15,6,3]));
-
+console.log(arithmeticTriplets([4,5,6,7,8,9],2))
