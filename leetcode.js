@@ -303,27 +303,46 @@
 // The strings are the same, so return true.
 
 
-function arrayStringsAreEqual(word1, word2) {
-  let word11= word1.sort((a,b)=>a-b);
-  let word22 = word2.sort((a,b)=>a-b);
-  let str1='';
-  let str2='';
-  for(let i=0; i<word11.length;i++)
-  {
-      str1=str1+word11[i];
-  }
-  for(let j=0; j<word22.length; j++)
-  {
-      str2= str2+word22[j];
-  }
-if(str1.toLowerCase() === str2.toLowerCase())
-{
-  return true;
-}
-else{
-  return false;
+// function arrayStringsAreEqual(word1, word2) {
+//   let word11= word1.sort((a,b)=>a-b);
+//   let word22 = word2.sort((a,b)=>a-b);
+//   let str1='';
+//   let str2='';
+//   for(let i=0; i<word11.length;i++)
+//   {
+//       str1=str1+word11[i];
+//   }
+//   for(let j=0; j<word22.length; j++)
+//   {
+//       str2= str2+word22[j];
+//   }
+// if(str1.toLowerCase() === str2.toLowerCase())
+// {
+//   return true;
+// }
+// else{
+//   return false;
+// }
+
+// }
+
+// console.log(arrayStringsAreEqual(["a", "cb"], ["ab", "c"]))
+
+
+function sumOddLengthSubarrays(arr) {
+  let sum = 0;
+    let n = arr.length
+    for(let i=0; i < arr.length; i++){
+        let s = n - i; // number of subarrays start with arr[i]
+        let e = i + 1;  // number of subarrays end with arr[i];
+          // so half of the sub arrays are odd so we devide it by two
+        // we multiply the number of occurence of the element in odd sub arrays with the element
+
+ 
+        sum += ((Math.ceil((s*e)/2))*arr[i]) 
+    }
+    return sum; 
 }
 
-}
+console.log(sumOddLengthSubarrays([1,4,2,5,3]));
 
-console.log(arrayStringsAreEqual(["a", "cb"], ["ab", "c"]))
