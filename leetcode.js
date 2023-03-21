@@ -329,20 +329,42 @@
 // console.log(arrayStringsAreEqual(["a", "cb"], ["ab", "c"]))
 
 
-function sumOddLengthSubarrays(arr) {
-  let sum = 0;
-    let n = arr.length
-    for(let i=0; i < arr.length; i++){
-        let s = n - i; // number of subarrays start with arr[i]
-        let e = i + 1;  // number of subarrays end with arr[i];
-          // so half of the sub arrays are odd so we devide it by two
-        // we multiply the number of occurence of the element in odd sub arrays with the element
+// function sumOddLengthSubarrays(arr) {
+//   let sum = 0;
+//     let n = arr.length
+//     for(let i=0; i < arr.length; i++){
+//         let s = n - i; // number of subarrays start with arr[i]
+//         let e = i + 1;  // number of subarrays end with arr[i];
+//         // so the total subarray which include arr[i] is s*e
+//         // so half of the sub arrays are odd so we devide it by two
+//         // we multiply the number of occurence of the element in odd sub arrays with the element
 
  
-        sum += ((Math.ceil((s*e)/2))*arr[i]) 
-    }
-    return sum; 
+//         sum += ((Math.ceil((s*e)/2))*arr[i]) 
+//     }
+//     return sum; 
+// }
+
+// console.log(sumOddLengthSubarrays([1,4,2,5,3]));
+
+// 1816. Truncate Sentence
+// A sentence is a list of words that are separated by a single space with no leading or trailing spaces. Each of the words consists of only uppercase and lowercase English letters (no punctuation).
+
+// For example, "Hello World", "HELLO", and "hello world hello world" are all sentences.
+// You are given a sentence s​​​​​​ and an integer k​​​​​​. You want to truncate s​​​​​​ such that it contains only the first k​​​​​​ words. Return s​​​​​​ after truncating it.
+// Input: s = "Hello how are you Contestant", k = 4
+// Output: "Hello how are you"
+
+function truncateSentence (s, k) {
+  let arr = s.split(" ");
+  let newarr =[];
+  for(let i=0;i<k; i++)
+  {
+    newarr.push(arr[i]);
+  } 
+
+return newarr.join(" ");
+
 }
-
-console.log(sumOddLengthSubarrays([1,4,2,5,3]));
-
+ 
+console.log(truncateSentence("Hello how are you Contestant", 4));
