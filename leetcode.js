@@ -472,32 +472,53 @@
 // Explanation: Strings "aaab" and "baa" are consistent since they only contain characters 'a' and 'b'.
 
 
-function countConsistentStrings(allowed, words) {
-  let charcount=0;   
-  let char1=[];
-  let str;
-  for(let i=0; i<words.length; i++)
-  {
-     str = words[i];
+// function countConsistentStrings(allowed, words) {
+//   let charcount=0;   
+//   let char1=[];
+//   let str;
+//   for(let i=0; i<words.length; i++)
+//   {
+//      str = words[i];
   
-  for(let j=0; j<str.length; j++)
-  {
+//   for(let j=0; j<str.length; j++)
+//   {
   
-      if(allowed.includes(str[j]))
-      {
-  char1.push(str[j]);
-      }
-  }
-      if(char1.length == str.length)
-      {
-        charcount++;
-      }
-      char1 = [];
-  }
+//       if(allowed.includes(str[j]))
+//       {
+//   char1.push(str[j]);
+//       }
+//   }
+//       if(char1.length == str.length)
+//       {
+//         charcount++;
+//       }
+//       char1 = [];
+//   }
   
      
-    return charcount;
-  };
+//     return charcount;
+//   };
 
-  console.log(countConsistentStrings("ab", ["ad","bd","aaab","baa","badab"]));
-  
+//   console.log(countConsistentStrings("ab", ["ad","bd","aaab","baa","badab"]));
+
+
+// 1913. Maximum Product Difference Between Two Pairs
+// The product difference between two pairs (a, b) and (c, d) is defined as (a * b) - (c * d).
+
+// For example, the product difference between (5, 6) and (2, 7) is (5 * 6) - (2 * 7) = 16.
+// Given an integer array nums, choose four distinct indices w, x, y, and z such that the product difference between pairs (nums[w], nums[x]) and (nums[y], nums[z]) is maximized.
+
+// Return the maximum such product difference.
+// Input: nums = [5,6,2,7,4]
+// Output: 34
+// Explanation: We can choose indices 1 and 3 for the first pair (6, 7) and indices 2 and 4 for the second pair (2, 4).
+// The product difference is (6 * 7) - (2 * 4) = 34.
+
+var maxProductDifference = function(nums) {
+  let sortednum = nums.sort((a,b) => a-b);
+  let firstpair= sortednum[0]*sortednum[1];
+  let secondpair=sortednum[sortednum.length-1]*sortednum[sortednum.length-2];
+  return secondpair-firstpair;
+};
+
+console.log(maxProductDifference([4,2,5,9,7,4,8]));
