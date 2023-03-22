@@ -549,21 +549,42 @@
 // return median;
 // };
 
-var findMedianSortedArrays = function(nums1, nums2) {
-  let thirdarr = [...nums1, ...nums2].sort((a,b)=> a-b);
-   let median;
+// var findMedianSortedArrays = function(nums1, nums2) {
+//   let thirdarr = [...nums1, ...nums2].sort((a,b)=> a-b);
+//    let median;
 
-if(thirdarr.length%2==0)
-{
-    let specificPlace = Math.floor(thirdarr.length / 2);
-median = (thirdarr[specificPlace-1]+thirdarr[specificPlace])/2;
-return median;
-}
-else
-{
-Hlength=Math.floor(thirdarr.length/2);
-return thirdarr[Hlength];
-}
-return median;
-};
-console.log(findMedianSortedArrays([1,3],[2]))
+// if(thirdarr.length%2==0)
+// {
+//     let specificPlace = Math.floor(thirdarr.length / 2);
+// median = (thirdarr[specificPlace-1]+thirdarr[specificPlace])/2;
+// return median;
+// }
+// else
+// {
+// Hlength=Math.floor(thirdarr.length/2);
+// return thirdarr[Hlength];
+// }
+// return median;
+// };
+// console.log(findMedianSortedArrays([1,3],[2]));
+
+
+var sortPeople = function(names, heights) {
+ 
+     let nameHeightMatrix = []
+     let result = []
+ 
+     for (let i = 0; i < names.length; i++) {
+         nameHeightMatrix.push([names[i], heights[i]])
+ 
+        }
+ console.log(nameHeightMatrix);
+     nameHeightMatrix.sort((a, b) => b[1] - a[1])
+     console.log(nameHeightMatrix);
+     for (let [name, height] of nameHeightMatrix) {
+         result.push(name)
+     }
+ 
+     return result
+ };
+ console.log(sortPeople(["Mary","John","Emma"],[180,165,170]))
