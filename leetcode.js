@@ -514,11 +514,36 @@
 // Explanation: We can choose indices 1 and 3 for the first pair (6, 7) and indices 2 and 4 for the second pair (2, 4).
 // The product difference is (6 * 7) - (2 * 4) = 34.
 
-var maxProductDifference = function(nums) {
-  let sortednum = nums.sort((a,b) => a-b);
-  let firstpair= sortednum[0]*sortednum[1];
-  let secondpair=sortednum[sortednum.length-1]*sortednum[sortednum.length-2];
-  return secondpair-firstpair;
+// var maxProductDifference = function(nums) {
+//   let sortednum = nums.sort((a,b) => a-b);
+//   let firstpair= sortednum[0]*sortednum[1];
+//   let secondpair=sortednum[sortednum.length-1]*sortednum[sortednum.length-2];
+//   return secondpair-firstpair;
+// };
+
+// console.log(maxProductDifference([4,2,5,9,7,4,8]));
+
+
+// 4. Median of Two Sorted Arrays
+// Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+
+// The overall run time complexity should be O(log (m+n)).
+// Input: nums1 = [1,3], nums2 = [2]
+// Output: 2.00000
+// Explanation: merged array = [1,2,3] and median is 2.
+
+var findMedianSortedArrays = function(nums1, nums2) {
+  let thirdarr = [...nums1, ...nums2];
+  let sum=0;
+  let count=0;
+  let median;
+for(let i=0; i<thirdarr.length; i++)
+{
+  sum =sum+thirdarr[i];
+  count++;
+} 
+median= sum/count;
+return median;
 };
 
-console.log(maxProductDifference([4,2,5,9,7,4,8]));
+console.log(findMedianSortedArrays([1,3],[2]))
