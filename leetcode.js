@@ -396,6 +396,21 @@
 
 // console.log(countKDifference([1,2,2,1],1));
 
+// 804. Unique Morse Code Words
+// International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows:
+// 'a' maps to ".-",
+// 'b' maps to "-...",
+// 'c' maps to "-.-.", and so on.
+// For convenience, the full table for the 26 letters of the English alphabet is given below:
+// [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+// Input: words = ["gin","zen","gig","msg"]
+// Output: 2
+// Explanation: The transformation of each word is:
+// "gin" -> "--...-."
+// "zen" -> "--...-."
+// "gig" -> "--...--."
+// "msg" -> "--...--."
+// There are 2 different transformations: "--...-." and "--...--.".
 
 var uniqueMorseRepresentations = function(words) {
 
