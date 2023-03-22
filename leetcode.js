@@ -379,19 +379,46 @@
 // Input: nums = [1,2,2,1], k = 1
 // Output: 4 
 
-function countKDifference(nums, k) {
-  let count =0;
-  for(let i=0; i<nums.length; i++)
-  {
-      for(let j=0; j<nums.length; j++)
-      {
-          if(nums[i]-nums[j]==k)
-          {
-              count++;
-          }
-      }
-  } 
-  return count;
-};
+// function countKDifference(nums, k) {
+//   let count =0;
+//   for(let i=0; i<nums.length; i++)
+//   {
+//       for(let j=0; j<nums.length; j++)
+//       {
+//           if(nums[i]-nums[j]==k)
+//           {
+//               count++;
+//           }
+//       }
+//   } 
+//   return count;
+// };
 
-console.log(countKDifference([1,2,2,1],1));
+// console.log(countKDifference([1,2,2,1],1));
+
+
+var uniqueMorseRepresentations = function(words) {
+
+    const data = {a:".-", b:"-...",c:"-.-.",d:"-..",e:".",f:"..-.",g:"--.",h:"....",i:"..",j:".---",k:"-.-",l:".-..",m:"--",n:"-.",o:"---",p:".--.",q:"--.-",r:".-.",s:"...",t:"-",u:"..-",v:"...-",w:".--",x:"-..-",y:"-.--",z:"--.."}
+    
+        const set =new Set();
+    
+      for(let i=0;i<words.length; i++)
+      {
+        let res="";
+            for(let j=0; j<words[i].length;j++)
+          {
+    
+    res =res + data[words[i][j]];
+    
+          }
+           set.add(res);
+                 
+    
+       }
+    
+      return set.size;  
+    
+    };
+
+    console.log(uniqueMorseRepresentations(["gin","zen","gig","msg"]));
