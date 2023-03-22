@@ -412,28 +412,92 @@
 // "msg" -> "--...--."
 // There are 2 different transformations: "--...-." and "--...--.".
 
-var uniqueMorseRepresentations = function(words) {
+// var uniqueMorseRepresentations = function(words) {
 
-    const data = {a:".-", b:"-...",c:"-.-.",d:"-..",e:".",f:"..-.",g:"--.",h:"....",i:"..",j:".---",k:"-.-",l:".-..",m:"--",n:"-.",o:"---",p:".--.",q:"--.-",r:".-.",s:"...",t:"-",u:"..-",v:"...-",w:".--",x:"-..-",y:"-.--",z:"--.."}
+//     const data = {a:".-", b:"-...",c:"-.-.",d:"-..",e:".",f:"..-.",g:"--.",h:"....",i:"..",j:".---",k:"-.-",l:".-..",m:"--",n:"-.",o:"---",p:".--.",q:"--.-",r:".-.",s:"...",t:"-",u:"..-",v:"...-",w:".--",x:"-..-",y:"-.--",z:"--.."}
     
-        const set =new Set();
+//         const set =new Set();
     
-      for(let i=0;i<words.length; i++)
-      {
-        let res="";
-            for(let j=0; j<words[i].length;j++)
-          {
+//       for(let i=0;i<words.length; i++)
+//       {
+//         let res="";
+//             for(let j=0; j<words[i].length;j++)
+//           {
     
-    res =res + data[words[i][j]];
+//     res =res + data[words[i][j]];
     
-          }
-           set.add(res);
+//           }
+//            set.add(res);
                  
     
-       }
+//        }
     
-      return set.size;  
+//       return set.size;  
     
-    };
+//     };
 
-    console.log(uniqueMorseRepresentations(["gin","zen","gig","msg"]));
+//     console.log(uniqueMorseRepresentations(["gin","zen","gig","msg"]));
+
+// var countConsistentStrings = function(allowed, words) {
+//     let charcount;    
+//     let count=0;
+//   for(let i=0; i<words.length; i++)
+//   {
+
+// for(let j=0; j<allowed.length; j++)
+// {
+//     if(words[i].includes(allowed[j]))
+//     {
+//         charcount++;
+//     }
+// }
+// if(charcount >= allowed.length)
+// {
+// count++;
+// }
+// charcount =0;
+//   }  
+//   return count;
+// };
+
+// console.log(countConsistentStrings("ab", ["ad","bd","aaab","baa","badab"]));
+
+
+// 1684. Count the Number of Consistent Strings
+// You are given a string allowed consisting of distinct characters and an array of strings words. A string is consistent if all characters in the string appear in the string allowed.
+
+// Return the number of consistent strings in the array words.
+// Input: allowed = "ab", words = ["ad","bd","aaab","baa","badab"]
+// Output: 2
+// Explanation: Strings "aaab" and "baa" are consistent since they only contain characters 'a' and 'b'.
+
+
+function countConsistentStrings(allowed, words) {
+  let charcount=0;   
+  let char1=[];
+  let str;
+  for(let i=0; i<words.length; i++)
+  {
+     str = words[i];
+  
+  for(let j=0; j<str.length; j++)
+  {
+  
+      if(allowed.includes(str[j]))
+      {
+  char1.push(str[j]);
+      }
+  }
+      if(char1.length == str.length)
+      {
+        charcount++;
+      }
+      char1 = [];
+  }
+  
+     
+    return charcount;
+  };
+
+  console.log(countConsistentStrings("ab", ["ad","bd","aaab","baa","badab"]));
+  
