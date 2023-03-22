@@ -532,18 +532,38 @@
 // Output: 2.00000
 // Explanation: merged array = [1,2,3] and median is 2.
 
+// var findMedianSortedArrays = function(nums1, nums2) {
+//   let thirdarr = [...nums1, ...nums2].sort((a,b)=> a-b);
+//   console.log(thirdarr);
+//   let sum=0;
+//   let count=0;
+//   let median;
+//   Hlength=Math.floor(thirdarr.length/2);
+//   console.log(Hlength);
+// for(let i=Hlength; i<Hlength+2; i++)
+// {
+//   sum =sum+thirdarr[i];
+//   count++;
+// } 
+// median= sum/count;
+// return median;
+// };
+
 var findMedianSortedArrays = function(nums1, nums2) {
-  let thirdarr = [...nums1, ...nums2];
-  let sum=0;
-  let count=0;
-  let median;
-for(let i=0; i<thirdarr.length; i++)
+  let thirdarr = [...nums1, ...nums2].sort((a,b)=> a-b);
+   let median;
+
+if(thirdarr.length%2==0)
 {
-  sum =sum+thirdarr[i];
-  count++;
-} 
-median= sum/count;
+    let specificPlace = Math.floor(thirdarr.length / 2);
+median = (thirdarr[specificPlace-1]+thirdarr[specificPlace])/2;
+return median;
+}
+else
+{
+Hlength=Math.floor(thirdarr.length/2);
+return thirdarr[Hlength];
+}
 return median;
 };
-
 console.log(findMedianSortedArrays([1,3],[2]))
