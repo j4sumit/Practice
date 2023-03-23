@@ -569,22 +569,36 @@
 // console.log(findMedianSortedArrays([1,3],[2]));
 
 
-var sortPeople = function(names, heights) {
+// var sortPeople = function(names, heights) {
  
-     let nameHeightMatrix = []
-     let result = []
+//      let nameHeightMatrix = []
+//      let result = []
  
-     for (let i = 0; i < names.length; i++) {
-         nameHeightMatrix.push([names[i], heights[i]])
+//      for (let i = 0; i < names.length; i++) {
+//          nameHeightMatrix.push([names[i], heights[i]])
  
-        }
- console.log(nameHeightMatrix);
-     nameHeightMatrix.sort((a, b) => b[1] - a[1])
-     console.log(nameHeightMatrix);
-     for (let [name, height] of nameHeightMatrix) {
-         result.push(name)
-     }
+//         }
+//  console.log(nameHeightMatrix);
+//      nameHeightMatrix.sort((a, b) => b[1] - a[1])
+//      console.log(nameHeightMatrix);
+//      for (let [name, height] of nameHeightMatrix) {
+//          result.push(name)
+//      }
  
-     return result
- };
- console.log(sortPeople(["Mary","John","Emma"],[180,165,170]))
+//      return result
+//  };
+//  console.log(sortPeople(["Mary","John","Emma"],[180,165,170]))
+
+// 1464. Maximum Product of Two Elements in an Array
+// Given the array of integers nums, you will choose two different indices i and j of that array. Return the maximum value of (nums[i]-1)*(nums[j]-1).
+ 
+// Input: nums = [3,4,5,2]
+// Output: 12 
+// Explanation: If you choose the indices i=1 and j=2 (indexed from 0), you will get the maximum value, that is, (nums[1]-1)*(nums[2]-1) = (4-1)*(5-1) = 3*4 = 12. 
+var maxProduct = function(nums) {
+    let sortednums = nums.sort((a,b) => a-b);
+    
+    return (sortednums[sortednums.length-1]-1) *(sortednums[sortednums.length-2]-1)  
+  };
+
+  console.log(maxProduct([3,4,5,2]));
