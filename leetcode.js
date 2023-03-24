@@ -725,11 +725,12 @@ var vowelStrings = function(words, left, right) {
     let vowels=['a','e','i','o','u'];
     let count =0;
     let word;
-    for(let i=0; i<words.length; i++)
+    // for(let i=0; i<words.length; i++)
+    for(let i=left; i<=right; i++)
     {
         word =words[i].toLowerCase();
-        console.log(vowels.includes(word[0]));
-        console.log(vowels.includes(word[word.length-1]));
+        // console.log(vowels.includes(word[0]));
+        // console.log(vowels.includes(word[word.length-1]));
         
 if(vowels.includes(word[0]) && vowels.includes(word[word.length-1]) )
 {
