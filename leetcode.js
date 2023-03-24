@@ -654,19 +654,53 @@
 // - The separation of 77 is [7,7].
 // answer = [1,3,2,5,8,3,7,7]. Note that answer contains the separations in the same order.
 
-var separateDigits = function(nums) {
-    let res = [];
+// var separateDigits = function(nums) {
+// //     let res = [];
 //  return nums.join("").split("");
- for(let i=0; i<nums.length; i++)
- {
- str = nums[i]+"";
- for(let j=0; j<str.length; j++)
- {
-     res.push(Number(str[j]));
- }
- }
- return res;
- };
+// //  for(let i=0; i<nums.length; i++)
+// //  {
+// //  str = nums[i]+"";
+// //  for(let j=0; j<str.length; j++)
+// //  {
+// //      res.push(Number(str[j]));
+// //  }
+// //  }
+// //  return res;
+//  };
 
 
- console.log(separateDigits([13,25,83,77]));
+//  console.log(separateDigits([13,25,83,77]));
+
+// 2108. Find First Palindromic String in the Array
+// Given an array of strings words, return the first palindromic string in the array. If there is no such string, return an empty string "".
+
+// A string is palindromic if it reads the same forward and backward.
+// Input: words = ["abc","car","ada","racecar","cool"]
+// Output: "ada"
+// Explanation: The first string that is palindromic is "ada".
+// Note that "racecar" is also palindromic, but it is not the first.
+
+var firstPalindrome = function(words) {
+
+
+    let word;
+        for(let j=0; j<words.length; j++)
+        {
+            word= words[j];
+            let tempword=""; 
+    for(let i=word.length-1; i>=0; i--)
+       {
+    tempword= tempword+ word[i];
+       }
+
+    
+         if(word=== tempword)
+            {
+                return word;
+            }
+    
+        }
+        return "";
+    };
+
+    console.log(firstPalindrome(["abc","car","ada","racecar","cool"]));
