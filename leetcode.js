@@ -783,8 +783,35 @@
 // Input: s = "God Ding"
 // Output: "doG gniD"
 
-var reverseWords = function(s) {
-    let res = s.split("").reverse().join("").split(" ").reverse().join(" ");
-    return res;
-};
-console.log(reverseWords("Let's take LeetCode contest"));
+// var reverseWords = function(s) {
+//     let res = s.split("").reverse().join("").split(" ").reverse().join(" ");
+//     return res;
+// };
+// console.log(reverseWords("Let's take LeetCode contest"));
+
+// 1768. Merge Strings Alternately
+// You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.
+
+// Return the merged string.
+// Input: word1 = "abc", word2 = "pqr"
+// Output: "apbqcr"
+// Explanation: The merged string will be merged as so:
+// word1:  a   b   c
+// word2:    p   q   r
+// merged: a p b q c r
+
+var mergeAlternately = function(word1, word2) {
+    let str1=word1.split('');
+    let str2=word2.split('');
+    let maxlen = Math.max(str1.length, str2.length)
+    let res=[];
+    for(let i=0; i<maxlen;i++)
+    {
+  res.push(str1[i]);
+  res.push(str2[i]);
+    }
+  
+    return res.join('');  
+  };
+
+  console.log(mergeAlternately("abc", "pqr"))
