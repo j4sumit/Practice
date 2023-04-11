@@ -756,18 +756,35 @@
 // 7896 contains 4 digits (even number of digits). 
 // Therefore only 12 and 7896 contain an even number of digits.
 
-var findNumbers = function(nums) {
-    let count =0;
-    for(let i=0; i<nums.length; i++)
-    {
-        let digit =nums[i].toString().length;
-        if(digit%2==0)
-        {
-            count++;
-        }
-    }
-    return count;
+// var findNumbers = function(nums) {
+//     let count =0;
+//     for(let i=0; i<nums.length; i++)
+//     {
+//         let digit =nums[i].toString().length;
+//         if(digit%2==0)
+//         {
+//             count++;
+//         }
+//     }
+//     return count;
   
-  }
+//   }
 
-console.log(findNumbers([12,345,2,6,7896]));
+// console.log(findNumbers([12,345,2,6,7896]));
+
+// 557. Reverse Words in a String III
+// Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+// Example 1:
+
+// Input: s = "Let's take LeetCode contest"
+// Output: "s'teL ekat edoCteeL tsetnoc"
+// Example 2:
+
+// Input: s = "God Ding"
+// Output: "doG gniD"
+
+var reverseWords = function(s) {
+    let res = s.split("").reverse().join("").split(" ").reverse().join(" ");
+    return res;
+};
+console.log(reverseWords("Let's take LeetCode contest"));
