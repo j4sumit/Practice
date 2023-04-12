@@ -800,18 +800,36 @@
 // word2:    p   q   r
 // merged: a p b q c r
 
-var mergeAlternately = function(word1, word2) {
-    let str1=word1.split('');
-    let str2=word2.split('');
-    let maxlen = Math.max(str1.length, str2.length)
-    let res=[];
-    for(let i=0; i<maxlen;i++)
-    {
-  res.push(str1[i]);
-  res.push(str2[i]);
-    }
+// var mergeAlternately = function(word1, word2) {
+//     let str1=word1.split('');
+//     let str2=word2.split('');
+//     let maxlen = Math.max(str1.length, str2.length)
+//     let res=[];
+//     for(let i=0; i<maxlen;i++)
+//     {
+//   res.push(str1[i]);
+//   res.push(str2[i]);
+//     }
   
-    return res.join('');  
-  };
+//     return res.join('');  
+//   };
 
-  console.log(mergeAlternately("abc", "pqr"))
+//   console.log(mergeAlternately("abc", "pqr"))
+
+// 	1119 Remove Vowels from a String
+
+function removevowels(str){
+  let vowels ="aeiouAEIOU";
+  let res='';
+for(let i=0; i<str.length; i++)
+{
+  if(vowels.indexOf(str[i])===-1)
+  {
+res =res + str[i];
+  }
+}
+return res;
+}
+
+console.log(removevowels("Sumit Kumar ChaurasiyA"));
+
