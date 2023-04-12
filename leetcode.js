@@ -876,22 +876,45 @@
 // Input: s = "Hello"
 // Output: "hello"
 
-var toLowerCase = function(s) {
-  let res="";
-  for(let i=0; i<s.length; i++)
-  {
-    let ascii= s.charCodeAt(i);
-    if(ascii>=65 && ascii<=90)
-    {
-      res =res+String.fromCharCode(ascii+32);
-    }
-    else{
-      res =res+s.charAt(i);
-    }
-  }
-  return res;
-};
+// var toLowerCase = function(s) {
+//   let res="";
+//   for(let i=0; i<s.length; i++)
+//   {
+//     let ascii= s.charCodeAt(i);
+//     if(ascii>=65 && ascii<=90)
+//     {
+//       res =res+String.fromCharCode(ascii+32);
+//     }
+//     else{
+//       res =res+s.charAt(i);
+//     }
+//   }
+//   return res;
+// };
 
-console.log(toLowerCase("Hello"));
-console.log(toLowerCase("here"));
-console.log(toLowerCase("LOVEly"));
+// console.log(toLowerCase("Hello"));
+// console.log(toLowerCase("here"));
+// console.log(toLowerCase("LOVEly"));
+
+// 344. Reverse String
+// Write a function that reverses a string. The input string is given as an array of characters s.
+// You must do this by modifying the input array in-place with O(1) extra memory.
+// Example 1:
+// Input: s = ["h","e","l","l","o"]
+// Output: ["o","l","l","e","h"]
+function revesestr(str)
+{
+  let left=0;
+  let right=str.length-1;
+  while(left<right)
+  {
+    let temp=str[left];
+    str[left]=str[right];
+    str[right]=temp;
+    left++;
+    right--;
+  }
+  return str;
+}
+console.log(revesestr(["h","e","l","l","o"]));
+console.log(revesestr(["H","a","n","n","a","h"]));
