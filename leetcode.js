@@ -818,18 +818,54 @@
 
 // 	1119 Remove Vowels from a String
 
-function removevowels(str){
-  let vowels ="aeiouAEIOU";
-  let res='';
-for(let i=0; i<str.length; i++)
-{
-  if(vowels.indexOf(str[i])===-1)
-  {
-res =res + str[i];
-  }
-}
-return res;
+// function removevowels(str){
+//   let vowels ="aeiouAEIOU";
+//   let res='';
+// for(let i=0; i<str.length; i++)
+// {
+//   if(vowels.indexOf(str[i])===-1)
+//   {
+// res =res + str[i];
+//   }
+// }
+// return res;
+// }
+
+// console.log(removevowels("Sumit Kumar ChaurasiyA"));
+
+// 1221. Split a String in Balanced Strings
+// Balanced strings are those that have an equal quantity of 'L' and 'R' characters.
+
+// Given a balanced string s, split it into some number of substrings such that:
+
+// Each substring is balanced.
+// Return the maximum number of balanced strings you can obtain.
+// Input: s = "RLRRLLRLRL"
+// Output: 4
+// Explanation: s can be split into "RL", "RRLL", "RL", "RL", each substring contains same number of 'L' and 'R'.
+
+function balancedStringSplit(s) {
+  let Lcount=0;
+  let Rcount=0;
+  let res=0;
+ for(let i=0; i<s.length; i++)
+ {
+     if(s[i]=="L")
+     {
+Lcount++
+     }
+     if(s[i]=="R")
+     {
+         Rcount++;
+     }
+     if(Lcount === Rcount)
+     {
+         res++;
+     }
+ } 
+ return res;
 }
 
-console.log(removevowels("Sumit Kumar ChaurasiyA"));
-
+console.log(balancedStringSplit("RLRRLLRLRL"));
+console.log(balancedStringSplit("RLRRRLLRLL"));
+console.log(balancedStringSplit("LLLLRRRR"));
