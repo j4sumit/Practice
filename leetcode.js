@@ -844,28 +844,54 @@
 // Output: 4
 // Explanation: s can be split into "RL", "RRLL", "RL", "RL", each substring contains same number of 'L' and 'R'.
 
-function balancedStringSplit(s) {
-  let Lcount=0;
-  let Rcount=0;
-  let res=0;
- for(let i=0; i<s.length; i++)
- {
-     if(s[i]=="L")
-     {
-Lcount++
-     }
-     if(s[i]=="R")
-     {
-         Rcount++;
-     }
-     if(Lcount === Rcount)
-     {
-         res++;
-     }
- } 
- return res;
-}
+// function balancedStringSplit(s) {
+//   let Lcount=0;
+//   let Rcount=0;
+//   let res=0;
+//  for(let i=0; i<s.length; i++)
+//  {
+//      if(s[i]=="L")
+//      {
+// Lcount++
+//      }
+//      if(s[i]=="R")
+//      {
+//          Rcount++;
+//      }
+//      if(Lcount === Rcount)
+//      {
+//          res++;
+//      }
+//  } 
+//  return res;
+// }
 
-console.log(balancedStringSplit("RLRRLLRLRL"));
-console.log(balancedStringSplit("RLRRRLLRLL"));
-console.log(balancedStringSplit("LLLLRRRR"));
+// console.log(balancedStringSplit("RLRRLLRLRL"));
+// console.log(balancedStringSplit("RLRRRLLRLL"));
+// console.log(balancedStringSplit("LLLLRRRR"));
+
+// 709. To Lower Case
+// Given a string s, return the string after replacing every uppercase letter with the same lowercase letter.
+// Example 1:
+// Input: s = "Hello"
+// Output: "hello"
+
+var toLowerCase = function(s) {
+  let res="";
+  for(let i=0; i<s.length; i++)
+  {
+    let ascii= s.charCodeAt(i);
+    if(ascii>=65 && ascii<=90)
+    {
+      res =res+String.fromCharCode(ascii+32);
+    }
+    else{
+      res =res+s.charAt(i);
+    }
+  }
+  return res;
+};
+
+console.log(toLowerCase("Hello"));
+console.log(toLowerCase("here"));
+console.log(toLowerCase("LOVEly"));
