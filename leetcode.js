@@ -991,28 +991,48 @@
 
 //1.
 
-function details(detail)
+// function details(detail)
+// {
+// console.log("Full name is :-"+ detail);
+// }
+
+// function name(fname,lname,callback)
+// {
+// let fullname= fname +lname;
+// callback(fullname);
+// }
+
+// name("sumit", "chaurasiya", details);
+
+// // 2.
+// function statement(total)
+// {
+// console.log("Finaly full expense:-" + total);
+// }
+// function totalexpence(morningexp, eveningexp, callback)
+// {
+// let totalexp = morningexp+eveningexp;
+// callback(totalexp);
+// }
+
+// totalexpence(200, 3000, statement);
+
+// SPREAD OPERATOR
+let arr1 = [1,2,3,4,5];
+let arr2 = [5,6,6,8,9];
+let res = [...arr1, ...arr2]
+console.log(res);
+
+// REST OPERATOR
+function sum(...numbers)
 {
-console.log("Full name is :-"+ detail);
+  let sum=0;
+  for(let num of numbers)
+  {
+    sum= sum+num;
+  }
+  return sum;
 }
 
-function name(fname,lname,callback)
-{
-let fullname= fname +lname;
-callback(fullname);
-}
-
-name("sumit", "chaurasiya", details);
-
-// 2.
-function statement(total)
-{
-console.log("Finaly full expense:-" + total);
-}
-function totalexpence(morningexp, eveningexp, callback)
-{
-let totalexp = morningexp+eveningexp;
-callback(totalexp);
-}
-
-totalexpence(200, 3000, statement);
+console.log(sum(12,13));
+console.log(sum(1,3,4,5,5));
