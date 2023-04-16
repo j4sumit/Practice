@@ -1119,24 +1119,33 @@
 
 // 3. BIND()
 
-const person ={
-  firstname :" Raju ",
-  lastname :" yadav",
-  fullname : function(SE)
-  {
-    return this.firstname+ this.lastname + SE;
-  }
-}
+// const person ={
+//   firstname :" Raju ",
+//   lastname :" yadav",
+//   fullname : function(SE)
+//   {
+//     return this.firstname+ this.lastname + SE;
+//   }
+// }
 
-const person1= {
-  firstname :"sumit",
-  lastname :"chaurasiya"
-}
+// const person1= {
+//   firstname :"sumit",
+//   lastname :"chaurasiya"
+// }
 
-const person2= {
-  firstname :"Amit",
-  lastname :"chaurasiyaa"
-}
+// const person2= {
+//   firstname :"Amit",
+//   lastname :"chaurasiyaa"
+// }
 
-let res= person.fullname.bind(person1, "Front end developer");
-console.log(res());
+// let res= person.fullname.bind(person1, "Front end developer");
+// console.log(res());
+
+// HOF - higher order function
+let numbers =[1,2,3,4, 5,6];
+let double = numbers.map((num) => num*2);
+console.log(double);
+let odd = numbers.filter((num) => num%2 != 0);
+console.log(odd);
+let sum = numbers.reduce((acc, val) => acc+val);
+console.log(sum);
