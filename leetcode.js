@@ -902,19 +902,35 @@
 // Example 1:
 // Input: s = ["h","e","l","l","o"]
 // Output: ["o","l","l","e","h"]
-function revesestr(str)
+// function revesestr(str)
+// {
+//   let left=0;
+//   let right=str.length-1;
+//   while(left<right)
+//   {
+//     let temp=str[left];
+//     str[left]=str[right];
+//     str[right]=temp;
+//     left++;
+//     right--;
+//   }
+//   return str;
+// }
+// console.log(revesestr(["h","e","l","l","o"]));
+// console.log(revesestr(["H","a","n","n","a","h"]));
+
+
+
+//Hoisting  example with variable and function.
+
+console.log(a);
+var a = 5;
+console.log(a);
+
+fullname();  
+function fullname()
 {
-  let left=0;
-  let right=str.length-1;
-  while(left<right)
-  {
-    let temp=str[left];
-    str[left]=str[right];
-    str[right]=temp;
-    left++;
-    right--;
-  }
-  return str;
+  console.log("Sumit Chaurasiya");
 }
-console.log(revesestr(["h","e","l","l","o"]));
-console.log(revesestr(["H","a","n","n","a","h"]));
+
+
