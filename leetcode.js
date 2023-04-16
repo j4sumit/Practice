@@ -934,23 +934,55 @@
 // }
  
 //2. laxical scope with example.
-function Name()
+// function Name()
+// {
+//   let name ="sumit"; // variable defined with function scope so can't accessed outside.
+//   console.log(name);
+// }
+
+// Name();
+// // console.log(name); // function scope can not accessed
+
+
+// let lastname = "chaurasiya"; // variable defined in globle scope so acces from anywhere in prgrm.
+// function lastName()
+// {
+//   console.log(lastname);
+// }
+
+// lastName();
+// console.log(lastname); // globle scope variable accessed.
+
+// 3. Closure with example
+//1.
+function makecount()
 {
-  let name ="sumit"; // variable defined with function scope so can't accessed outside.
-  console.log(name);
+  var c=1;
+function count()
+{
+  return c++;
+}
+return count
 }
 
-Name();
-// console.log(name); // function scope can not accessed
-
-
-let lastname = "chaurasiya"; // variable defined in globle scope so acces from anywhere in prgrm.
-function lastName()
+let res = makecount();
+console.log(res());
+console.log(res());
+console.log(res());
+// 2.
+function outerfun()
 {
-  console.log(lastname);
+  var firstname= "sumit";
+
+  function innerfun()
+  {
+    let lastname= "chaurasiya";
+    let fullname= firstname + " " +lastname;
+    return fullname;
+  }
+  return innerfun;
 }
 
-lastName();
-console.log(lastname); // globle scope variable accessed.
+let detail = outerfun();
 
-
+console.log(detail());
