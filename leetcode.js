@@ -921,16 +921,36 @@
 
 
 
-//Hoisting  example with variable and function.
+//1. Hoisting  example with variable and function.
 
-console.log(a);
-var a = 5;
-console.log(a);
+// console.log(a);
+// var a = 5;
+// console.log(a);
 
-fullname();  
-function fullname()
+// fullname();  
+// function fullname()
+// {
+//   console.log("Sumit Chaurasiya");
+// }
+ 
+//2. laxical scope with example.
+function Name()
 {
-  console.log("Sumit Chaurasiya");
+  let name ="sumit"; // variable defined with function scope so can't accessed outside.
+  console.log(name);
 }
+
+Name();
+// console.log(name); // function scope can not accessed
+
+
+let lastname = "chaurasiya"; // variable defined in globle scope so acces from anywhere in prgrm.
+function lastName()
+{
+  console.log(lastname);
+}
+
+lastName();
+console.log(lastname); // globle scope variable accessed.
 
 
