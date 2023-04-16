@@ -955,34 +955,64 @@
 
 // 3. Closure with example
 //1.
-function makecount()
+// function makecount()
+// {
+//   var c=1;
+// function count()
+// {
+//   return c++;
+// }
+// return count
+// }
+
+// let res = makecount();
+// console.log(res());
+// console.log(res());
+// console.log(res());
+// // 2.
+// function outerfun()
+// {
+//   var firstname= "sumit";
+
+//   function innerfun()
+//   {
+//     let lastname= "chaurasiya";
+//     let fullname= firstname + " " +lastname;
+//     return fullname;
+//   }
+//   return innerfun;
+// }
+
+// let detail = outerfun();
+
+// console.log(detail());
+
+// Call function example;
+
+//1.
+
+function details(detail)
 {
-  var c=1;
-function count()
-{
-  return c++;
-}
-return count
+console.log("Full name is :-"+ detail);
 }
 
-let res = makecount();
-console.log(res());
-console.log(res());
-console.log(res());
+function name(fname,lname,callback)
+{
+let fullname= fname +lname;
+callback(fullname);
+}
+
+name("sumit", "chaurasiya", details);
+
 // 2.
-function outerfun()
+function statement(total)
 {
-  var firstname= "sumit";
-
-  function innerfun()
-  {
-    let lastname= "chaurasiya";
-    let fullname= firstname + " " +lastname;
-    return fullname;
-  }
-  return innerfun;
+console.log("Finaly full expense:-" + total);
+}
+function totalexpence(morningexp, eveningexp, callback)
+{
+let totalexp = morningexp+eveningexp;
+callback(totalexp);
 }
 
-let detail = outerfun();
-
-console.log(detail());
+totalexpence(200, 3000, statement);
