@@ -1018,21 +1018,51 @@
 // totalexpence(200, 3000, statement);
 
 // SPREAD OPERATOR
-let arr1 = [1,2,3,4,5];
-let arr2 = [5,6,6,8,9];
-let res = [...arr1, ...arr2]
-console.log(res);
+// let arr1 = [1,2,3,4,5];
+// let arr2 = [5,6,6,8,9];
+// let res = [...arr1, ...arr2]
+// console.log(res);
 
-// REST OPERATOR
-function sum(...numbers)
+// // REST OPERATOR
+// function sum(...numbers)
+// {
+//   let sum=0;
+//   for(let num of numbers)
+//   {
+//     sum= sum+num;
+//   }
+//   return sum;
+// }
+
+// console.log(sum(12,13));
+// console.log(sum(1,3,4,5,5));
+
+// CURRYING FUNCTION
+
+// 1.
+
+function details(desisnation)
 {
-  let sum=0;
-  for(let num of numbers)
+return function(fname)
+{
+  return function(lname)
   {
-    sum= sum+num;
+    return fname +" " +  lname +" "+ desisnation;
   }
-  return sum;
+}
 }
 
-console.log(sum(12,13));
-console.log(sum(1,3,4,5,5));
+console.log(details("FrontEndDeveloper") ("Sumit")("Chaurasiya"));
+
+function multiply(num)
+{
+  return function(num1)
+  {
+return function(num2)
+{
+  return num*num1*num2;
+}
+  }
+}
+
+console.log(multiply(5)(2)(4));
