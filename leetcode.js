@@ -921,8 +921,10 @@
 
 
 
-//1. Hoisting  example with variable and function.
 
+// *********************************************************************
+//************************************************************8 */
+//1. Hoisting  example with variable and function.
 // console.log(a);
 // var a = 5;
 // console.log(a);
@@ -1037,32 +1039,104 @@
 // console.log(sum(12,13));
 // console.log(sum(1,3,4,5,5));
 
-// CURRYING FUNCTION
+// // CURRYING FUNCTION
 
-// 1.
+// // 1.
 
-function details(desisnation)
-{
-return function(fname)
-{
-  return function(lname)
+// function details(desisnation)
+// {
+// return function(fname)
+// {
+//   return function(lname)
+//   {
+//     return fname +" " +  lname +" "+ desisnation;
+//   }
+// }
+// }
+
+// console.log(details("FrontEndDeveloper") ("Sumit")("Chaurasiya"));
+
+// function multiply(num)
+// {
+//   return function(num1)
+//   {
+// return function(num2)
+// {
+//   return num*num1*num2;
+// }
+//   }
+// }
+
+// console.log(multiply(5)(2)(4));
+
+
+// CALL APPLY AND BIND METHOD()
+//1 . call()
+// const person ={
+//   fullname : function(city, country)
+//   {
+//     return this.firstname + this.lastname + city + country;
+//   }
+// }
+
+// const person1 ={
+//   firstname: "Sumit",
+//   lastname : "Chaurasiya"
+// };
+
+// const person2 ={
+//   firstname: "Amit",
+//   lastname : "Chaurasiya"
+// };
+// let details = person.fullname.call(person1, "mumbai", "india");
+// console.log(details);
+// let details2 = person.fullname.call(person2, "mumbai", "india");
+// console.log(details2);
+
+//2. apply()
+
+// const person ={
+//   firstname: "Raju",
+//     lastname : "yadav",
+//   fullname : function(city, country)
+//   {
+//     return this.firstname + this.lastname + city + country;
+//   }
+// }
+// const person1 ={
+//   firstname: "Sumit",
+//   lastname : "Chaurasiya"
+// };
+
+// const person2 ={
+//   firstname: "Amit",
+//   lastname : "Chaurasiya"
+// };
+// let details = person.fullname.apply(person1, ["mumbai", "india"]);
+// console.log(details);
+// let details2 = person.fullname.apply(person2, ["mumbai", "india"]);
+// console.log(details2);
+
+// 3. BIND()
+
+const person ={
+  firstname :" Raju ",
+  lastname :" yadav",
+  fullname : function(SE)
   {
-    return fname +" " +  lname +" "+ desisnation;
+    return this.firstname+ this.lastname + SE;
   }
 }
+
+const person1= {
+  firstname :"sumit",
+  lastname :"chaurasiya"
 }
 
-console.log(details("FrontEndDeveloper") ("Sumit")("Chaurasiya"));
-
-function multiply(num)
-{
-  return function(num1)
-  {
-return function(num2)
-{
-  return num*num1*num2;
-}
-  }
+const person2= {
+  firstname :"Amit",
+  lastname :"chaurasiyaa"
 }
 
-console.log(multiply(5)(2)(4));
+let res= person.fullname.bind(person1, "Front end developer");
+console.log(res());
