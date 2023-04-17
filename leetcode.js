@@ -1142,10 +1142,22 @@
 // console.log(res());
 
 // HOF - higher order function
-let numbers =[1,2,3,4, 5,6];
-let double = numbers.map((num) => num*2);
-console.log(double);
-let odd = numbers.filter((num) => num%2 != 0);
-console.log(odd);
-let sum = numbers.reduce((acc, val) => acc+val);
-console.log(sum);
+// let numbers =[1,2,3,4, 5,6];
+// let double = numbers.map((num) => num*2);
+// console.log(double);
+// let odd = numbers.filter((num) => num%2 != 0);
+// console.log(odd);
+// let sum = numbers.reduce((acc, val) => acc+val);
+// console.log(sum);
+
+// CREWARE QUESTIONS
+function multiply(a)
+{
+    return function(b)
+    {
+        return function(c){
+            return a+b+c;
+        }
+    }
+}
+console.log(multiply('x')('y')('z'));
