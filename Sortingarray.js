@@ -1,7 +1,7 @@
 function Sortingarray(arr)
 {
 // return arr.sort();
-return arr.sort((a,b)=> {return a-b;});
+return arr.sort((a,b)=> {return b-a;});
 
 }
 

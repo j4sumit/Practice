@@ -9,3 +9,4 @@ return str1.join('');
 }
 
 console.log(Alternatechartoupper("Sumit Chaurasiya"));
+//Out put - SuMiT ChAuRaSiYa
