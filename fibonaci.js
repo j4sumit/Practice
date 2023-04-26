@@ -57,11 +57,39 @@
 // console.log(fibonaci(8));
 
 
-function listFibonacci(n) {
-	var arr = [0, 1]
-	for (var  i = 0; i < n; i++) 
-    arr.push(arr[i] + arr[i + 1])
+// function listFibonacci(n) {
+// 	var arr = [0, 1]
+// 	for (var  i = 0; i < n; i++) 
+//     arr.push(arr[i] + arr[i + 1])
 
-  return arr
- 	}
-	console.log(listFibonacci(4))
+//   return arr
+//  	}
+// 	console.log(listFibonacci(4))
+function fibonaci(num)
+{
+	let n1=0;
+	let n2=1;
+	let sum=0;
+	// console.log(n1);
+	// console.log(n2);
+	for(let i=0; i<num;i++)
+	{
+		// sum=n1+n2;
+		// console.log(sum);
+		// n1=n2;
+		// n2=sum;
+console.log(n1);
+sum=n1+n2;
+n1=n2;
+n2=sum;
+	}
+}
+
+console.log(fibonaci(6))
+
+
+
+
+
+
+
