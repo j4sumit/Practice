@@ -15,4 +15,4 @@ function chunkArrayInGroup(arr, size){
     }
     return group
   }
-  console.log (chunkArrayInGroup(['a','b','c','d'],2)) //[["a", "b"], ["c", "d"]]
+  console.log (chunkArrayInGroup(['a','b','c','d','e','f'],3)) //[["a", "b"], ["c", "d"]]

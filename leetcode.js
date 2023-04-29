@@ -1151,13 +1151,25 @@
 // console.log(sum);
 
 // CREWARE QUESTIONS
-function multiply(a)
+// function multiply(a)
+// {
+//     return function(b)
+//     {
+//         return function(c){
+//             return a+b+c;
+//         }
+//     }
+// }
+// console.log(multiply('x')('y')('z'));
+
+function restparmeter(...arr)
 {
-    return function(b)
-    {
-        return function(c){
-            return a+b+c;
-        }
-    }
+let sum=0;
+for (let num of arr){
+    sum=sum+num;
+ 
 }
-console.log(multiply('x')('y')('z'));
+return sum;
+}
+let result= restparmeter(1,2,3,5,6,4,6,45,3,345,4,5,2,4,32,41);
+console.log(result);
