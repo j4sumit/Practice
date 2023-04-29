@@ -1190,18 +1190,33 @@
 // let res=smallestnum("IIII amm Sumit Chaurasiya from Bihar");
 // console.log(res);
 
-function largestnum(Strings)
+// function largestnum(Strings)
+// {
+// let Str=Strings.split(' ');
+//     let largest=Str[3];
+//     for(let i=0; i<Str.length; i++)
+//     {
+//         if(Str[i].length>largest.length)
+//         {
+//             largest=Str[i];
+//         }
+//     }
+// return largest;
+// }
+// let res=largestnum("IIII amm Sumit Chaurasiya from Bihar");
+// console.log(res);
+
+function largestcommonStr(String)
 {
-let Str=Strings.split(' ');
-    let largest=Str[3];
-    for(let i=0; i<Str.length; i++)
-    {
-        if(Str[i].length>largest.length)
-        {
-            largest=Str[i];
-        }
-    }
-return largest;
+    let arr=String.split(' ');
+    let sortedarr= arr.sort();
+let i=0;
+while(sortedarr[i].length>0 && sortedarr[i].charAt(i)==sortedarr[sortedarr.length-1].charAt(i))
+{
+    i++;
 }
-let res=largestnum("IIII amm Sumit Chaurasiya from Bihar");
-console.log(res);
+return sortedarr[0].substring(0,i);
+
+}
+
+console.log(largestcommonStr("Suresh Sujesh SuHanesh Sudhakar Sudhanshu"));
