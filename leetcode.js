@@ -1174,18 +1174,34 @@
 // let result= restparmeter(1,2,3,5,6,4,6,45,3,345,4,5,2,4,32,41);
 // console.log(result);
 
-function smallestnum(Strings)
+// function smallestnum(Strings)
+// {
+// let Str=Strings.split(' ');
+//     let smallset=Str[3];
+//     for(let i=0; i<Str.length; i++)
+//     {
+//         if(Str[i].length<smallset.length)
+//         {
+//             smallset=Str[i];
+//         }
+//     }
+// return smallset;
+// }
+// let res=smallestnum("IIII amm Sumit Chaurasiya from Bihar");
+// console.log(res);
+
+function largestnum(Strings)
 {
 let Str=Strings.split(' ');
-    let smallset=Str[3];
+    let largest=Str[3];
     for(let i=0; i<Str.length; i++)
     {
-        if(Str[i].length<smallset.length)
+        if(Str[i].length>largest.length)
         {
-            smallset=Str[i];
+            largest=Str[i];
         }
     }
-return smallset;
+return largest;
 }
-let res=smallestnum("IIII amm Sumit Chaurasiya from Bihar");
+let res=largestnum("IIII amm Sumit Chaurasiya from Bihar");
 console.log(res);
