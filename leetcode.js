@@ -1162,14 +1162,30 @@
 // }
 // console.log(multiply('x')('y')('z'));
 
-function restparmeter(...arr)
-{
-let sum=0;
-for (let num of arr){
-    sum=sum+num;
+// function restparmeter(...arr)
+// {
+// let sum=0;
+// for (let num of arr){
+//     sum=sum+num;
  
+// }
+// return sum;
+// }
+// let result= restparmeter(1,2,3,5,6,4,6,45,3,345,4,5,2,4,32,41);
+// console.log(result);
+
+function smallestnum(Strings)
+{
+let Str=Strings.split(' ');
+    let smallset=Str[3];
+    for(let i=0; i<Str.length; i++)
+    {
+        if(Str[i].length<smallset.length)
+        {
+            smallset=Str[i];
+        }
+    }
+return smallset;
 }
-return sum;
-}
-let result= restparmeter(1,2,3,5,6,4,6,45,3,345,4,5,2,4,32,41);
-console.log(result);
+let res=smallestnum("IIII amm Sumit Chaurasiya from Bihar");
+console.log(res);
