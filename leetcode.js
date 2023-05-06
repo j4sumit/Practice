@@ -1233,12 +1233,17 @@
 // }
 // console.log("converted object to array", newarr);
 
-for(var i=0; i<5;i++)
-{
-setTimeout(()=>{console.log(i)}, 100);  // 5,5,5,5,5
-}
+// for(var i=0; i<5;i++)
+// {
+// setTimeout(()=>{console.log(i)}, 100);  // 5,5,5,5,5
+// }
 
-for(let i=0; i<5;i++)
-{
-setTimeout(()=>{console.log(i)}, 100); //1,2,3,4,5
-}
+// for(let i=0; i<5;i++)
+// {
+// setTimeout(()=>{console.log(i)}, 100); //1,2,3,4,5
+// }
+
+// Generate random number of four digit
+let randNum = Math.random();
+let otp = Math.round((randNum*9000 +1000))
+console.log(otp);
