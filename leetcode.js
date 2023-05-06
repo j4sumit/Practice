@@ -1225,3 +1225,10 @@
 let arr= ["a","b","c"];
 let obj= arr.reduce((a,item, index)=>({...a,[index]:item}),{});
 console.log("converting array to object", obj);
+
+let newarr=[];
+for(let val in obj)
+{
+    newarr.push(obj[val]);
+}
+console.log("converted object to array", newarr);
