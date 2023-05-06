@@ -1273,10 +1273,35 @@
 // result=str.split(sub).length-1;// retunr how many times substr exist
 // console.log(result);
 
-let arr = [1,3,12,4,5,8,9,5,6];
-let sor = arr.sort((a,b) => b-a);
-console.log(sor);
+// let arr = [1,3,12,4,5,8,9,5,6];
+// let sor = arr.sort((a,b) => b-a);
+// console.log(sor);
 
-let arr1 = ["sumit","amit","sanjay"];
-let sor1 = arr1.sort((a,b) =>  (a>b) - (a<b) );
-console.log(sor1);
+// let arr1 = ["sumit","amit","sanjay"];
+// let sor1 = arr1.sort((a,b) =>  (a>b) - (a<b) );
+// console.log(sor1);
+
+let arr = [1,2,2,4,6,3,4,3,1,2,7,9];
+const hashMap={};
+arr.forEach(iterator=>{
+    if(iterator in hashMap){
+        hashMap[iterator]++;
+    }
+    else{
+        hashMap[iterator]=1;
+    }
+}
+)
+console.log(hashMap);
+let max =0;
+let maxitem;
+for(let key in hashMap)
+{
+    if(hashMap[key]>max)
+    {
+       max =hashMap[key];
+maxitem=key;
+    }
+
+}
+console.log(`${maxitem} repeat ${max} times`);
