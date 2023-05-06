@@ -1244,6 +1244,31 @@
 // }
 
 // Generate random number of four digit
-let randNum = Math.random();
-let otp = Math.round((randNum*9000 +1000))
-console.log(otp);
+// let randNum = Math.random();
+// let otp = Math.round((randNum*9000 +1000))
+// console.log(otp);
+
+
+// let str= "Sumit";
+
+// let res = Array.from(str);
+// let set =new Set([3,4,2,3,4,5,3]);
+// console.log(res);
+// let res1= Array.from([set]);
+// console.log(res1);
+
+const str = "bhar batai ye kya hai";
+const sub="ai";
+let result;
+
+//exist
+result = str.includes(sub);
+console.log(result);
+result = str.indexOf(sub);
+console.log(result);
+result = str.lastIndexOf(sub);
+console.log(result);
+
+
+result=str.split(sub).length-1;// retunr how many times substr exist
+console.log(result);
