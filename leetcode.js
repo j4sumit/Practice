@@ -1206,17 +1206,22 @@
 // let res=largestnum("IIII amm Sumit Chaurasiya from Bihar");
 // console.log(res);
 
-function largestcommonStr(String)
-{
-    let arr=String.split(' ');
-    let sortedarr= arr.sort();
-let i=0;
-while(sortedarr[i].length>0 && sortedarr[i].charAt(i)==sortedarr[sortedarr.length-1].charAt(i))
-{
-    i++;
-}
-return sortedarr[0].substring(0,i);
+// function largestcommonStr(String)
+// {
+//     let arr=String.split(' ');
+//     let sortedarr= arr.sort();
+// let i=0;
+// while(sortedarr[i].length>0 && sortedarr[i].charAt(i)==sortedarr[sortedarr.length-1].charAt(i))
+// {
+//     i++;
+// }
+// return sortedarr[0].substring(0,i);
 
-}
+// }
 
-console.log(largestcommonStr("Suresh Sujesh SuHanesh Sudhakar Sudhanshu"));
+// console.log(largestcommonStr("Suresh Sujesh SuHanesh Sudhakar Sudhanshu"));
+
+// converting array to object
+let arr= ["a","b","c"];
+let obj= arr.reduce((a,item, index)=>({...a,[index]:item}),{});
+console.log("converting array to object", obj);
