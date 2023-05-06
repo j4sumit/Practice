@@ -1222,13 +1222,23 @@
 // console.log(largestcommonStr("Suresh Sujesh SuHanesh Sudhakar Sudhanshu"));
 
 // converting array to object
-let arr= ["a","b","c"];
-let obj= arr.reduce((a,item, index)=>({...a,[index]:item}),{});
-console.log("converting array to object", obj);
+// let arr= ["a","b","c"];
+// let obj= arr.reduce((a,item, index)=>({...a,[index]:item}),{});
+// console.log("converting array to object", obj);
 
-let newarr=[];
-for(let val in obj)
+// let newarr=[];
+// for(let val in obj)
+// {
+//     newarr.push(obj[val]);
+// }
+// console.log("converted object to array", newarr);
+
+for(var i=0; i<5;i++)
 {
-    newarr.push(obj[val]);
+setTimeout(()=>{console.log(i)}, 100);  // 5,5,5,5,5
 }
-console.log("converted object to array", newarr);
+
+for(let i=0; i<5;i++)
+{
+setTimeout(()=>{console.log(i)}, 100); //1,2,3,4,5
+}
