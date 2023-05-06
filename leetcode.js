@@ -1257,18 +1257,26 @@
 // let res1= Array.from([set]);
 // console.log(res1);
 
-const str = "bhar batai ye kya hai";
-const sub="ai";
-let result;
+// const str = "bhar batai ye kya hai";
+// const sub="ai";
+// let result;
 
-//exist
-result = str.includes(sub);
-console.log(result);
-result = str.indexOf(sub);
-console.log(result);
-result = str.lastIndexOf(sub);
-console.log(result);
+// //exist
+// result = str.includes(sub);
+// console.log(result);
+// result = str.indexOf(sub);
+// console.log(result);
+// result = str.lastIndexOf(sub);
+// console.log(result);
 
 
-result=str.split(sub).length-1;// retunr how many times substr exist
-console.log(result);
+// result=str.split(sub).length-1;// retunr how many times substr exist
+// console.log(result);
+
+let arr = [1,3,12,4,5,8,9,5,6];
+let sor = arr.sort((a,b) => b-a);
+console.log(sor);
+
+let arr1 = ["sumit","amit","sanjay"];
+let sor1 = arr1.sort((a,b) =>  (a>b) - (a<b) );
+console.log(sor1);
