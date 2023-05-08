@@ -1281,27 +1281,44 @@
 // let sor1 = arr1.sort((a,b) =>  (a>b) - (a<b) );
 // console.log(sor1);
 
-let arr = [1,2,2,4,6,3,4,3,1,2,7,9];
-const hashMap={};
-arr.forEach(iterator=>{
-    if(iterator in hashMap){
-        hashMap[iterator]++;
-    }
-    else{
-        hashMap[iterator]=1;
-    }
+// Max Number of rempeated element in arr.
+// let arr = [1,2,2,4,6,3,4,3,1,2,7,9];
+// const hashMap={};
+// arr.forEach(iterator=>{
+//     if(iterator in hashMap){
+//         hashMap[iterator]++;
+//     }
+//     else{
+//         hashMap[iterator]=1;
+//     }
+// }
+// )
+// console.log(hashMap);
+// let max =0;
+// let maxitem;
+// for(let key in hashMap)
+// {
+//     if(hashMap[key]>max)
+//     {
+//        max =hashMap[key];
+// maxitem=key;
+//     }
+
+// }
+// console.log(`${maxitem} repeat ${max} times`);
+
+let v=2;
+let promise = new Promise((res)=>res(2));
+promise.then((v)=> {
+console.log(v);
+return v*2;})
+.then((v)=> {
+console.log(v);
+return v*2;})
+.then((v)=> {
+console.log(v).finally((v)=> {
+console.log(v);
+return 0;});
 }
 )
-console.log(hashMap);
-let max =0;
-let maxitem;
-for(let key in hashMap)
-{
-    if(hashMap[key]>max)
-    {
-       max =hashMap[key];
-maxitem=key;
-    }
 
-}
-console.log(`${maxitem} repeat ${max} times`);
