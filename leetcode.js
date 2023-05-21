@@ -1342,23 +1342,42 @@
 // Palindromes.push(str);
 // }
 // console.log(Palindromes);
-
-const words = ['cat', 'dog', 'rd', 'elephant', 'lion','giraffe'];
-// let smallestword = words[0];
-// for(let i =0; i<words.length; i++)
+// Smallest working in arry
+// const words = ['cat', 'dog', 'rd', 'elephant', 'lion','giraffe'];
+// // let smallestword = words[0];
+// // for(let i =0; i<words.length; i++)
+// // {
+// //     if(words[i].length< smallestword.length)
+// //     {
+// //         smallestword = words[i];
+// //     }
+// // }
+// let res = words.reduce((smallestword, curword) => {if (curword.length<smallestword.length)
 // {
-//     if(words[i].length< smallestword.length)
-//     {
-//         smallestword = words[i];
-//     }
+//     return curword;
 // }
-let res = words.reduce((smallestword, curword) => {if (curword.length<smallestword.length)
-{
-    return curword;
-}
-else{
-    return smallestword;
-}
-}, words[0]);
+// else{
+//     return smallestword;
+// }
+// }, words[0]);
 
-console.log(`smallest word ${res}`);
+// console.log(`smallest word ${res}`);
+
+const arr =[2,7,11,5,10,1];
+const target =12;
+function findnum(arr, val)
+{
+    let newarr=[];
+for(let i =0; i<arr.length; i++)
+{
+    for (let j =i+1; j<arr.length;j++)
+    {
+        if (arr[i]+arr[j]==val)
+        {
+newarr.push([arr[i],arr[j]]);
+        }
+    }
+}
+return newarr;
+}
+console.log(findnum(arr, target))
