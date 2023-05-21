@@ -1322,10 +1322,23 @@
 // }
 // )
 
-function removeDuplicates(){
-    var string ="India is my country"
-    let result = string.split(' ').reverse().join(' ').split('').reverse().join('')
-    return result
- }
- console.log(removeDuplicates()) 
- output = "aidnI si ym yrtnuoc"
+// function removeDuplicates(){
+//     var string ="India is my country"
+//     let result = string.split(' ').reverse().join(' ').split('').reverse().join('')
+//     return result
+//  }
+//  console.log(removeDuplicates()) 
+//  output = "aidnI si ym yrtnuoc"
+
+//Palindrom
+
+let arr =['Radar',"Mom",'hello','level','world','daD'];
+const Palindromes =[]
+for(let i=0; i<arr.length;  i++)
+{
+str= arr[i];
+reversestr=str.split('').reverse().join('');
+if(str.toLowerCase() == reversestr.toLowerCase())
+Palindromes.push(str);
+}
+console.log(Palindromes);
