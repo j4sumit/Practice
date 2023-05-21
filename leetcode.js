@@ -1430,14 +1430,33 @@
 
 // 2.c. Write a function called `findNthLargest` that takes an array of numbers and a number n as input and returns the nth largest number in the array.
 // ```js
-const arr = [3, 1, 7, 4, 5];
-// console.log(findNthLargest(arr, 3));
+// const arr = [3, 1, 7, 4, 5];
+// // console.log(findNthLargest(arr, 3));
 
-function findNthLargest(arr, num)
+// function findNthLargest(arr, num)
+// {
+//     let sortedarr = arr.sort((a,b) => a-b);
+//     console.log(sortedarr);
+//     return sortedarr[sortedarr.length-num];
+// }
+
+// console.log(findNthLargest(arr,2));
+
+// Write a function called `findMissingNumber` that takes an array of integers from 1 to n with one number missing and returns the missing number.
+// ```js
+const arr = [1, 2, 3, 5, 6, 7, 8, 9,10,15];
+// console.log(findMissingNumber(arr));
+
+function findMissingNumber(arr){
+    let sortedarr = [...new Set(arr)]
+    let newarr=[];
+for(let i=1 ; i<sortedarr[sortedarr.length-1]; i++)
 {
-    let sortedarr = arr.sort((a,b) => a-b);
-    console.log(sortedarr);
-    return sortedarr[sortedarr.length-num];
+if(sortedarr.includes(i)==false)
+{
+newarr.push(i);
+}    
 }
-
-console.log(findNthLargest(arr,2));
+return newarr;
+}
+console.log(findMissingNumber(arr));
