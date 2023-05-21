@@ -1411,19 +1411,33 @@
 
 // console.log(sumOfPrimes(10));
 
-const arr = [3, 4, 6, 8, 1, 2, 9];
-// console.log(findPairs(arr, 10));
-// [[3, 7], [4, 6], [8, 2], [1, 9]]
+// const arr = [3, 4, 6, 8, 1, 2, 9];
+// // console.log(findPairs(arr, 10));
+// // [[3, 7], [4, 6], [8, 2], [1, 9]]
 
-function findPairs(num, target)
+// function findPairs(num, target)
+// {
+//     let newarr=[];
+//     for(let i=0; i<num.length;i++)
+//     for(let j=i+1;j<num.length;j++)
+//     if(num[i]+num[j]==target)
+//     {
+// newarr.push([num[i],num[j]]);
+//     }
+//     return newarr;
+// }
+// console.log(findPairs(arr, 10))
+
+// 2.c. Write a function called `findNthLargest` that takes an array of numbers and a number n as input and returns the nth largest number in the array.
+// ```js
+const arr = [3, 1, 7, 4, 5];
+// console.log(findNthLargest(arr, 3));
+
+function findNthLargest(arr, num)
 {
-    let newarr=[];
-    for(let i=0; i<num.length;i++)
-    for(let j=i+1;j<num.length;j++)
-    if(num[i]+num[j]==target)
-    {
-newarr.push([num[i],num[j]]);
-    }
-    return newarr;
+    let sortedarr = arr.sort((a,b) => a-b);
+    console.log(sortedarr);
+    return sortedarr[sortedarr.length-num];
 }
-console.log(findPairs(arr, 10))
+
+console.log(findNthLargest(arr,2));
