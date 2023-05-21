@@ -1363,21 +1363,50 @@
 
 // console.log(`smallest word ${res}`);
 
-const arr =[2,7,11,5,10,1];
-const target =12;
-function findnum(arr, val)
-{
-    let newarr=[];
-for(let i =0; i<arr.length; i++)
-{
-    for (let j =i+1; j<arr.length;j++)
-    {
-        if (arr[i]+arr[j]==val)
-        {
-newarr.push([arr[i],arr[j]]);
-        }
+// const arr =[2,7,11,5,10,1];
+// const target =12;
+// function findnum(arr, val)
+// {
+//     let newarr=[];
+// for(let i =0; i<arr.length; i++)
+// {
+//     for (let j =i+1; j<arr.length;j++)
+//     {
+//         if (arr[i]+arr[j]==val)
+//         {
+// newarr.push([arr[i],arr[j]]);
+//         }
+//     }
+// }
+// return newarr;
+// }
+// console.log(findnum(arr, target))
+
+// 1.c. Write a function called `sumOfPrimes` that takes a number as input and returns the sum of all prime numbers less than or equal to the input number.
+// ```js
+// console.log(sumOfPrimes(10));
+// 17 // 2 + 3 + 5 + 7 = 17
+
+function sumOfPrimes(num){
+    let sum=0;
+for(let i=2; i<=num; i++)
+{   
+    if(chechinig(i)){
+sum= sum+i;
     }
 }
-return newarr;
+return sum;
 }
-console.log(findnum(arr, target))
+function chechinig(number)
+{
+for(let i=2; i<number; i++)
+{
+    if(number%i===0)
+    {
+        return false;
+    }
+}
+return true;
+}
+
+console.log(sumOfPrimes(10));
