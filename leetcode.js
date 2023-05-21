@@ -1332,13 +1332,33 @@
 
 //Palindrom
 
-let arr =['Radar',"Mom",'hello','level','world','daD'];
-const Palindromes =[]
-for(let i=0; i<arr.length;  i++)
+// let arr =['Radar',"Mom",'hello','level','world','daD'];
+// const Palindromes =[]
+// for(let i=0; i<arr.length;  i++)
+// {
+// str= arr[i];
+// reversestr=str.split('').reverse().join('');
+// if(str.toLowerCase() == reversestr.toLowerCase())
+// Palindromes.push(str);
+// }
+// console.log(Palindromes);
+
+const words = ['cat', 'dog', 'rd', 'elephant', 'lion','giraffe'];
+// let smallestword = words[0];
+// for(let i =0; i<words.length; i++)
+// {
+//     if(words[i].length< smallestword.length)
+//     {
+//         smallestword = words[i];
+//     }
+// }
+let res = words.reduce((smallestword, curword) => {if (curword.length<smallestword.length)
 {
-str= arr[i];
-reversestr=str.split('').reverse().join('');
-if(str.toLowerCase() == reversestr.toLowerCase())
-Palindromes.push(str);
+    return curword;
 }
-console.log(Palindromes);
+else{
+    return smallestword;
+}
+}, words[0]);
+
+console.log(`smallest word ${res}`);
