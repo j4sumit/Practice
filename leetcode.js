@@ -1307,18 +1307,25 @@
 // }
 // console.log(`${maxitem} repeat ${max} times`);
 
-let v=2;
-let promise = new Promise((res)=>res(2));
-promise.then((v)=> {
-console.log(v);
-return v*2;})
-.then((v)=> {
-console.log(v);
-return v*2;})
-.then((v)=> {
-console.log(v).finally((v)=> {
-console.log(v);
-return 0;});
-}
-)
+// let v=2;
+// let promise = new Promise((res)=>res(2));
+// promise.then((v)=> {
+// console.log(v);
+// return v*2;})
+// .then((v)=> {
+// console.log(v);
+// return v*2;})
+// .then((v)=> {
+// console.log(v).finally((v)=> {
+// console.log(v);
+// return 0;});
+// }
+// )
 
+function removeDuplicates(){
+    var string ="India is my country"
+    let result = string.split(' ').reverse().join(' ').split('').reverse().join('')
+    return result
+ }
+ console.log(removeDuplicates()) 
+ output = "aidnI si ym yrtnuoc"
