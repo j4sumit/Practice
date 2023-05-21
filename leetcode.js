@@ -1462,13 +1462,27 @@
 // console.log(findMissingNumber(arr));
 // Write a function called `filterByLength` that takes an array of strings and a number as input and returns an array of all the strings in the input array whose length is greater than or equal to the input number.
 // ```js
-const arr = ["apple", "banana", "cherry", "date", "elderberry"];
-// console.log(filterByLength(arr, 6));
-// ["banana", "cherry", "elderberry"]
+// const arr = ["apple", "banana", "cherry", "date", "elderberry"];
+// // console.log(filterByLength(arr, 6));
+// // ["banana", "cherry", "elderberry"]
 
-function filterByLength(arr, x){
-    let res =[]; 
-    res = arr.filter((item) => item.length > x);
-    return res;
+// function filterByLength(arr, x){
+//     let res =[]; 
+//     res = arr.filter((item) => item.length > x);
+//     return res;
+// }
+// console.log(filterByLength(arr, 6));
+
+// Write a function called `countOccurrences` that takes an array of numbers and a number as input and returns the number of times the input number occurs in the array.
+const arr = [4, 2, 6, 8, 4, 1, 4];
+function countOccurrences(arr, num){
+let count = arr.reduce((acc, curval)=> {
+    if(curval===num) 
+    {
+        return acc+1
+    }
+return acc;
+},0);
+return count;
 }
-console.log(filterByLength(arr, 6));
+console.log(countOccurrences(arr, 2));
