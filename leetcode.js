@@ -1444,19 +1444,31 @@
 
 // Write a function called `findMissingNumber` that takes an array of integers from 1 to n with one number missing and returns the missing number.
 // ```js
-const arr = [1, 2, 3, 5, 6, 7, 8, 9,10,15];
-// console.log(findMissingNumber(arr));
+// const arr = [1, 2, 3, 5, 6, 7, 8, 9,10,15];
+// // console.log(findMissingNumber(arr));
 
-function findMissingNumber(arr){
-    let sortedarr = [...new Set(arr)]
-    let newarr=[];
-for(let i=1 ; i<sortedarr[sortedarr.length-1]; i++)
-{
-if(sortedarr.includes(i)==false)
-{
-newarr.push(i);
-}    
+// function findMissingNumber(arr){
+//     let sortedarr = [...new Set(arr)]
+//     let newarr=[];
+// for(let i=1 ; i<sortedarr[sortedarr.length-1]; i++)
+// {
+// if(sortedarr.includes(i)==false)
+// {
+// newarr.push(i);
+// }    
+// }
+// return newarr;
+// }
+// console.log(findMissingNumber(arr));
+// Write a function called `filterByLength` that takes an array of strings and a number as input and returns an array of all the strings in the input array whose length is greater than or equal to the input number.
+// ```js
+const arr = ["apple", "banana", "cherry", "date", "elderberry"];
+// console.log(filterByLength(arr, 6));
+// ["banana", "cherry", "elderberry"]
+
+function filterByLength(arr, x){
+    let res =[]; 
+    res = arr.filter((item) => item.length > x);
+    return res;
 }
-return newarr;
-}
-console.log(findMissingNumber(arr));
+console.log(filterByLength(arr, 6));
