@@ -1387,26 +1387,43 @@
 // console.log(sumOfPrimes(10));
 // 17 // 2 + 3 + 5 + 7 = 17
 
-function sumOfPrimes(num){
-    let sum=0;
-for(let i=2; i<=num; i++)
-{   
-    if(chechinig(i)){
-sum= sum+i;
-    }
-}
-return sum;
-}
-function chechinig(number)
-{
-for(let i=2; i<number; i++)
-{
-    if(number%i===0)
-    {
-        return false;
-    }
-}
-return true;
-}
+// function sumOfPrimes(num){
+//     let sum=0;
+// for(let i=2; i<=num; i++)
+// {   
+//     if(chechinig(i)){
+// sum= sum+i;
+//     }
+// }
+// return sum;
+// }
+// function chechinig(number)
+// {
+// for(let i=2; i<number; i++)
+// {
+//     if(number%i===0)
+//     {
+//         return false;
+//     }
+// }
+// return true;
+// }
 
-console.log(sumOfPrimes(10));
+// console.log(sumOfPrimes(10));
+
+const arr = [3, 4, 6, 8, 1, 2, 9];
+// console.log(findPairs(arr, 10));
+// [[3, 7], [4, 6], [8, 2], [1, 9]]
+
+function findPairs(num, target)
+{
+    let newarr=[];
+    for(let i=0; i<num.length;i++)
+    for(let j=i+1;j<num.length;j++)
+    if(num[i]+num[j]==target)
+    {
+newarr.push([num[i],num[j]]);
+    }
+    return newarr;
+}
+console.log(findPairs(arr, 10))
