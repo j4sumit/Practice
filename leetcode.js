@@ -1504,22 +1504,43 @@
 //   }
 //   console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
 
-function largestOfFour(arr) {
-    let newarr=[];
-  for(let i=0; i<arr.length; i++)
-  {
-    let max= -Infinity;
-    for(let j=0;j<arr[i].length; j++)
+// function largestOfFour(arr) {
+//     let newarr=[];
+//   for(let i=0; i<arr.length; i++)
+//   {
+//     let max= -Infinity;
+//     for(let j=0;j<arr[i].length; j++)
+//     {
+//   if(arr[i][j]>max)
+//   {
+//   max=arr[i][j];
+//   }
+//     }
+//     newarr.push(max);
+//   }
+  
+//     return newarr;
+//   }
+  
+//   console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+
+
+// Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number. For the purpose of this challenge, do not use the built-in .repeat() method.
+
+
+
+function repeatStringNumTimes(str, num) {
+    let res="";
+    if(num<=0)
     {
-  if(arr[i][j]>max)
-  {
-  max=arr[i][j];
-  }
+      res=""
     }
-    newarr.push(max);
-  }
-  
-    return newarr;
-  }
-  
-  console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+    else{
+      for(let i=1; i<=num; i++)
+      {
+   res = res +str;
+      }
+    }
+     return res;
+   }
+   console.log(repeatStringNumTimes("abc", 3));
