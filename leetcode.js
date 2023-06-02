@@ -1599,8 +1599,8 @@
 
 
 function titleCase(str) {
-let arr = str.split(" ");
-let res=[];
+const arr = str.split(" ");
+const res=[];
 for(let i=0; i<arr.length; i++)
 {
     res[i]=arr[i][0].toUpperCase()+arr[i].slice(1).toLowerCase();
