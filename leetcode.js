@@ -1696,4 +1696,4 @@ function chunkArrayInGroups(arr, size) {
      return res;
    }
    
-   console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+   console.log(chunkArrayInGroups(["a", "b", "c", "d","e","f","g","h"], 4));
