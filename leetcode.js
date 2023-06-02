@@ -1646,15 +1646,39 @@
 
 // Likewise, getIndexToIns([20,3,5], 19) should return 2 because once the array has been sorted it will look like [3,5,20] and 19 is less than 20 (index 2) and greater than 5 (index 1).
 
-function getIndexToIns(arr, num) {
-    let match = arr.sort((a,b)=> a-b).find((item)=> item>=num);
-    if(match)
-    {
-  let indexofitem= arr.indexOf(match);
-    return indexofitem;
-    }
-    else{
-      return arr.length;
-    }
+// function getIndexToIns(arr, num) {
+//     let match = arr.sort((a,b)=> a-b).find((item)=> item>=num);
+//     if(match)
+//     {
+//   let indexofitem= arr.indexOf(match);
+//     return indexofitem;
+//     }
+//     else{
+//       return arr.length;
+//     }
+//   }
+//   console.log(getIndexToIns([10, 20, 30, 40, 50], 30));
+
+// or example, ["hello", "Hello"], should return true because all of the letters in the second string are present in the first, ignoring case.
+
+// The arguments ["hello", "hey"] should return false because the string hello does not contain a y.
+
+// Lastly, ["Alien", "line"], should return true because all of the letters in line are present in Alien.
+
+function mutation(arr) {
+    let f=0;
+   for(let char of arr[1])
+   {
+     if(arr[0].toLowerCase().includes(char.toLowerCase()))
+     {
+       f=1;
+     }
+     else{
+       f=0;
+       return false;
+     }
+   }
+  
+  return true;
   }
-  console.log(getIndexToIns([10, 20, 30, 40, 50], 30));
+  console.log(mutation(["hello", "hey"]));
