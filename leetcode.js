@@ -1474,15 +1474,32 @@
 // console.log(filterByLength(arr, 6));
 
 // Write a function called `countOccurrences` that takes an array of numbers and a number as input and returns the number of times the input number occurs in the array.
-const arr = [4, 2, 6, 8, 4, 1, 4];
-function countOccurrences(arr, num){
-let count = arr.reduce((acc, curval)=> {
-    if(curval===num) 
+// const arr = [4, 2, 6, 8, 4, 1, 4];
+// function countOccurrences(arr, num){
+// let count = arr.reduce((acc, curval)=> {
+//     if(curval===num) 
+//     {
+//         return acc+1
+//     }
+// return acc;
+// },0);
+// return count;
+// }
+// console.log(countOccurrences(arr, 2));
+
+function findLongestWordLength(str) {
+  
+    let strtoarr= str.split(" ");
+  let largestr=strtoarr[0];
+  
+    for(let i=0; i<strtoarr.length; i++)
     {
-        return acc+1
+  if(strtoarr[i].length>largestr.length)
+  {
+  largestr= strtoarr[i];
+  }
     }
-return acc;
-},0);
-return count;
-}
-console.log(countOccurrences(arr, 2));
+    
+    return largestr.length;
+  }
+  console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
