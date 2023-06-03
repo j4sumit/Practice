@@ -1746,16 +1746,57 @@
 // console.log([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18);
 
 //Use the delete Keyword to Remove Object Properties
-let foods = {
-  apples: 25,
-  oranges: 32,
-  plums: 28,
-  bananas: 13,
-  grapes: 35,
-  strawberries: 27
-};
+// let foods = {
+//   apples: 25,
+//   oranges: 32,
+//   plums: 28,
+//   bananas: 13,
+//   grapes: 35,
+//   strawberries: 27
+// };
 
-delete foods.oranges;
-delete foods.plums;
-delete foods.strawberries;
-console.log(foods);
+// delete foods.oranges;
+// delete foods.plums;
+// delete foods.strawberries;
+// console.log(foods);
+
+
+// const users = {
+//   Alan: {
+//     online: false
+//   },
+//   Jeff: {
+//     online: true
+//   },
+//   Sarah: {
+//     online: false
+//   }
+// }
+
+//Iterate Through the Keys of an Object with a for...in Statement
+
+const users = {
+  Alan: {
+    online: true
+  },
+  Jeff: {
+    online: true
+  },
+  Sarah: {
+    online: false
+  }
+}
+
+function countOnline(allUsers) {
+  let result = 0;
+for(let key in allUsers)
+{
+if(allUsers[key].online===true)
+{
+  result++;
+}
+}
+return result;
+}
+
+console.log(countOnline(users));
