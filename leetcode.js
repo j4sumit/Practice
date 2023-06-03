@@ -1775,28 +1775,56 @@
 
 //Iterate Through the Keys of an Object with a for...in Statement
 
-const users = {
+// const users = {
+//   Alan: {
+//     online: true
+//   },
+//   Jeff: {
+//     online: true
+//   },
+//   Sarah: {
+//     online: false
+//   }
+// }
+
+// function countOnline(allUsers) {
+//   let result = 0;
+// for(let key in allUsers)
+// {
+// if(allUsers[key].online===true)
+// {
+//   result++;
+// }
+// }
+// return result;
+// }
+
+// console.log(countOnline(users));
+
+// Generate an Array of All Object Keys with Object.keys()
+
+
+let users = {
   Alan: {
-    online: true
+    age: 27,
+    online: false
   },
   Jeff: {
+    age: 32,
     online: true
   },
   Sarah: {
+    age: 48,
     online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
   }
+};
+
+function getArrayOfUsers(obj) {
+return Object.keys(obj);
 }
 
-function countOnline(allUsers) {
-  let result = 0;
-for(let key in allUsers)
-{
-if(allUsers[key].online===true)
-{
-  result++;
-}
-}
-return result;
-}
-
-console.log(countOnline(users));
+console.log(getArrayOfUsers(users));
