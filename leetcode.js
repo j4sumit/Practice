@@ -1714,15 +1714,33 @@
 
 // Check For The Presence of an Element With indexOf()
 
-function quickCheck(arr, elem) {
-let c= arr.indexOf(elem);
-if(c>=0)
+// function quickCheck(arr, elem) {
+// let c= arr.indexOf(elem);
+// if(c>=0)
+// {
+//   return true;
+// }
+// else{
+//   return false;
+// }
+// }
+
+// console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+// Iterate Through All an Array's Items Using For Loops
+//Passed:filteredArray([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18) should return [[10, 8, 3], [14, 6, 23]]
+
+function filteredArray(arr, elem) {
+  let newArr = [];
+for(let i =0; i<arr.length; i++)
 {
-  return true;
+ if(arr[i].indexOf(elem)==-1)
+ {
+   newArr.push(arr[i]);
+ } 
 }
-else{
-  return false;
-}
+  return newArr;
 }
 
-console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+console.log([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18);
