@@ -1687,13 +1687,27 @@
 
 // Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
 
-function chunkArrayInGroups(arr, size) {
-    let res=[];
-   for(let i=0; i<arr.length; i=i+size)
-   {
-   res.push(arr.slice(i,i+size))
-   }
-     return res;
-   }
+// function chunkArrayInGroups(arr, size) {
+//     let res=[];
+//    for(let i=0; i<arr.length; i=i+size)
+//    {
+//    res.push(arr.slice(i,i+size))
+//    }
+//      return res;
+//    }
    
-   console.log(chunkArrayInGroups(["a", "b", "c", "d","e","f","g","h"], 4));
+//    console.log(chunkArrayInGroups(["a", "b", "c", "d","e","f","g","h"], 4));
+
+// Copy an Array with the Spread Operator
+// copyMachine([true, false, true], 2) should return [[true, false, true], [true, false, true]]
+
+function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+newArr=([...newArr,[...arr]])
+    num--;
+  }
+  return newArr;
+}
+
+console.log(copyMachine([true, false, true], 2));
