@@ -1701,13 +1701,28 @@
 // Copy an Array with the Spread Operator
 // copyMachine([true, false, true], 2) should return [[true, false, true], [true, false, true]]
 
-function copyMachine(arr, num) {
-  let newArr = [];
-  while (num >= 1) {
-newArr=([...newArr,[...arr]])
-    num--;
-  }
-  return newArr;
+// function copyMachine(arr, num) {
+//   let newArr = [];
+//   while (num >= 1) {
+// newArr=([...newArr,[...arr]])
+//     num--;
+//   }
+//   return newArr;
+// }
+
+// console.log(copyMachine([true, false, true], 2));
+
+// Check For The Presence of an Element With indexOf()
+
+function quickCheck(arr, elem) {
+let c= arr.indexOf(elem);
+if(c>=0)
+{
+  return true;
+}
+else{
+  return false;
+}
 }
 
-console.log(copyMachine([true, false, true], 2));
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
