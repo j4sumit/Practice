@@ -1843,16 +1843,41 @@
 
 //Understand Own Properties
 
-function Bird(name) {
+// function Bird(name) {
+//   this.name = name;
+//   this.numLegs = 2;
+// }
+
+// let canary = new Bird("Tweety");
+// let ownProps = [];
+// for(let pro in canary)
+// {
+//   if (canary.hasOwnProperty(pro))
+//   ownProps.push(pro);
+// }
+// console.log(ownProps);
+
+//Iterate Over All Properties
+
+function Dog(name) {
   this.name = name;
-  this.numLegs = 2;
 }
 
-let canary = new Bird("Tweety");
+Dog.prototype.numLegs = 4;
+let beagle = new Dog("Snoopy");
 let ownProps = [];
-for(let pro in canary)
+let prototypeProps = [];
+
+for(let pro in beagle)
 {
-  if (canary.hasOwnProperty(pro))
-  ownProps.push(pro);
+  if(beagle.hasOwnProperty(pro))
+  {
+    ownProps.push(pro);
+  }
+  else{
+    prototypeProps.push(pro);
+  }
 }
+
 console.log(ownProps);
+console.log(prototypeProps);
