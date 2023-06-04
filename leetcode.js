@@ -1859,25 +1859,44 @@
 
 //Iterate Over All Properties
 
+// function Dog(name) {
+//   this.name = name;
+// }
+
+// Dog.prototype.numLegs = 4;
+// let beagle = new Dog("Snoopy");
+// let ownProps = [];
+// let prototypeProps = [];
+
+// for(let pro in beagle)
+// {
+//   if(beagle.hasOwnProperty(pro))
+//   {
+//     ownProps.push(pro);
+//   }
+//   else{
+//     prototypeProps.push(pro);
+//   }
+// }
+
+// console.log(ownProps);
+// console.log(prototypeProps);
+
+//Understand the Constructor Property
+
 function Dog(name) {
   this.name = name;
 }
 
-Dog.prototype.numLegs = 4;
-let beagle = new Dog("Snoopy");
-let ownProps = [];
-let prototypeProps = [];
+let franco = new Dog("hi");
 
-for(let pro in beagle)
+function joinDogFraternity(candidate) {
+if(candidate.constructor===Dog)
 {
-  if(beagle.hasOwnProperty(pro))
-  {
-    ownProps.push(pro);
-  }
-  else{
-    prototypeProps.push(pro);
-  }
+  return true;
 }
-
-console.log(ownProps);
-console.log(prototypeProps);
+else{
+  return false;
+}
+}
+console.log(joinDogFraternity(franco));
