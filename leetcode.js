@@ -1884,19 +1884,29 @@
 
 //Understand the Constructor Property
 
+// function Dog(name) {
+//   this.name = name;
+// }
+
+// let franco = new Dog("hi");
+
+// function joinDogFraternity(candidate) {
+// if(candidate.constructor===Dog)
+// {
+//   return true;
+// }
+// else{
+//   return false;
+// }
+// }
+// console.log(joinDogFraternity(franco));
+
+
+// Understand Where an Object’s Prototype Comes From
+
 function Dog(name) {
   this.name = name;
 }
-
-let franco = new Dog("hi");
-
-function joinDogFraternity(candidate) {
-if(candidate.constructor===Dog)
-{
-  return true;
-}
-else{
-  return false;
-}
-}
-console.log(joinDogFraternity(franco));
+let beagle = new Dog("Snoopy");
+let res = Dog.prototype.isPrototypeOf(beagle);
+console.log(res);
