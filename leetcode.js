@@ -1804,27 +1804,38 @@
 // Generate an Array of All Object Keys with Object.keys()
 
 
-let users = {
-  Alan: {
-    age: 27,
-    online: false
-  },
-  Jeff: {
-    age: 32,
-    online: true
-  },
-  Sarah: {
-    age: 48,
-    online: false
-  },
-  Ryan: {
-    age: 19,
-    online: true
+// let users = {
+//   Alan: {
+//     age: 27,
+//     online: false
+//   },
+//   Jeff: {
+//     age: 32,
+//     online: true
+//   },
+//   Sarah: {
+//     age: 48,
+//     online: false
+//   },
+//   Ryan: {
+//     age: 19,
+//     online: true
+//   }
+// };
+
+// function getArrayOfUsers(obj) {
+// return Object.keys(obj);
+// }
+
+// console.log(getArrayOfUsers(users));
+
+// Create a Method on an Object
+
+let dog = {
+  name: "Spot",
+  numLegs: 4,
+  sayLegs: function() {
+    return `This dog has ${dog.numLegs} legs.`
   }
 };
-
-function getArrayOfUsers(obj) {
-return Object.keys(obj);
-}
-
-console.log(getArrayOfUsers(users));
+console.log(dog.sayLegs());
