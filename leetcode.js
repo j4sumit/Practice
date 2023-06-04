@@ -1831,11 +1831,28 @@
 
 // Create a Method on an Object
 
-let dog = {
-  name: "Spot",
-  numLegs: 4,
-  sayLegs: function() {
-    return `This dog has ${dog.numLegs} legs.`
-  }
-};
-console.log(dog.sayLegs());
+// let dog = {
+//   name: "Spot",
+//   numLegs: 4,
+//   sayLegs: function() {
+//     return `This dog has ${dog.numLegs} legs.`
+//   }
+// };
+// console.log(dog.sayLegs());
+
+
+//Understand Own Properties
+
+function Bird(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+let ownProps = [];
+for(let pro in canary)
+{
+  if (canary.hasOwnProperty(pro))
+  ownProps.push(pro);
+}
+console.log(ownProps);
