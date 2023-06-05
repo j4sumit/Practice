@@ -2384,9 +2384,17 @@
 
 // Sort an Array Alphabetically using the sort Method
 
-function alphabeticalOrder(arr) {
-  return arr.sort(function(a,b){
-   return a === b ? 0 : a < b ? -1 : 1
-   });
+// function alphabeticalOrder(arr) {
+//   return arr.sort(function(a,b){
+//    return a === b ? 0 : a < b ? -1 : 1
+//    });
+// }
+// console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]));
+
+
+// Split a String into an Array Using the split Method
+
+function splitify(str) {
+return str.split(/\W/)
 }
-console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]));
+console.log(splitify("Hello World,I-am code"));
