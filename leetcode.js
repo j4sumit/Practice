@@ -2437,15 +2437,37 @@
 
 // Sum All Numbers in a Range
 
-function sumAll(arr) {
-  let newar=arr.sort((a,b)=>a-b)
-  let sum=0;
-  let min=newar[0];
-  let max=newar[1];
-  for(let i=min; i<=max; i++)
+// function sumAll(arr) {
+//   let newar=arr.sort((a,b)=>a-b)
+//   let sum=0;
+//   let min=newar[0];
+//   let max=newar[1];
+//   for(let i=min; i<=max; i++)
+//   {
+//     sum = sum+ i;
+//   }
+//   return sum;
+// }
+// console.log(sumAll([1, 4]));
+
+
+// Diff Two Arrays
+
+function diffArray(arr1, arr2) {
+  const newArr = [];
+function add(firstarr, secondarr)
+{
+for(let i=0; i<firstarr.length; i++)
+{
+  if(secondarr.indexOf(firstarr[i])==-1)
   {
-    sum = sum+ i;
+    newArr.push(firstarr[i]);
   }
-  return sum;
 }
-console.log(sumAll([1, 4]));
+}
+add(arr1,arr2);
+add(arr2,arr1);
+  return newArr;
+}
+
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
