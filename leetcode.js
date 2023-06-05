@@ -2374,9 +2374,19 @@
 
 // Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
 
-const squareList = arr => {
-  return arr.filter(item => item>0 && item % parseInt(item)===0).map(item => item*item);
-};
+// const squareList = arr => {
+//   return arr.filter(item => item>0 && item % parseInt(item)===0).map(item => item*item);
+// };
 
-const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
-console.log(squaredIntegers);
+// const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+// console.log(squaredIntegers);
+
+
+// Sort an Array Alphabetically using the sort Method
+
+function alphabeticalOrder(arr) {
+  return arr.sort(function(a,b){
+   return a === b ? 0 : a < b ? -1 : 1
+   });
+}
+console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]));
