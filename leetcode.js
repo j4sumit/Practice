@@ -2418,7 +2418,19 @@
 
 // Use the every Method to Check that Every Element in an Array Meets a Criteria
 
-function checkPositive(arr) {
-return arr.every((item)=> item>0)
+// function checkPositive(arr) {
+// return arr.some((item)=> item>0)
+// }
+// console.log(checkPositive([1, 2, 3, -4, 5]));
+
+
+function add(x) {
+return function(y)
+{
+  return function(z)
+  {
+    return x+y+z;
+  }
 }
-console.log(checkPositive([1, 2, 3, -4, 5]));
+}
+console.log(add(10)(20)(30));
