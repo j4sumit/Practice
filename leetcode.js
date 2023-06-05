@@ -2394,7 +2394,16 @@
 
 // Split a String into an Array Using the split Method
 
-function splitify(str) {
-return str.split(/\W/)
+// function splitify(str) {
+// return str.split(/\W/)
+// }
+// console.log(splitify("Hello World,I-am code"));
+
+// Combine an Array into a String Using the join Method
+
+function sentensify(str) {
+let arr=str.split(/\W/);
+const res= arr.join(" ");
+return res
 }
-console.log(splitify("Hello World,I-am code"));
+console.log(sentensify("May-the @force?be-with-you"));
