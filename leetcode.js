@@ -1953,19 +1953,41 @@
 
 
 
-const prepareGreenTea = () => 'greenTea';
-const prepareBlackTea = () => 'blackTea';
-const getTea = (prepareTea, numOfCups) => {
-  const teaCups = [];
-  for(let cups = 1; cups <= numOfCups; cups += 1) {
-    const teaCup = prepareTea();
-    teaCups.push(teaCup);
-  }
-  return teaCups;
-};
-const tea4GreenTeamFCC = getTea(prepareGreenTea,27);
-const tea4BlackTeamFCC = getTea(prepareBlackTea,13);
-console.log(
-  tea4GreenTeamFCC,
-  tea4BlackTeamFCC
-);
+// const prepareGreenTea = () => 'greenTea';
+// const prepareBlackTea = () => 'blackTea';
+// const getTea = (prepareTea, numOfCups) => {
+//   const teaCups = [];
+//   for(let cups = 1; cups <= numOfCups; cups += 1) {
+//     const teaCup = prepareTea();
+//     teaCups.push(teaCup);
+//   }
+//   return teaCups;
+// };
+// const tea4GreenTeamFCC = getTea(prepareGreenTea,27);
+// const tea4BlackTeamFCC = getTea(prepareBlackTea,13);
+// console.log(
+//   tea4GreenTeamFCC,
+//   tea4BlackTeamFCC
+// );
+
+// Refactor Global Variables Out of Functions
+
+const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+function add(arr, bookName) {
+  let newarr =[...arr]
+  newarr.push(bookName);
+  return newarr; 
+}
+function remove(arr, bookName) {
+  let newarr= [...arr];
+  const book_index = newarr.indexOf(bookName);
+
+  if (book_index >= 0) {
+ newarr.splice(book_index,1);
+    return newarr;
+    }
+}
+
+
+console.log(add(bookList, "newitem"));
+console.log(remove(bookList,"On The Electrodynamics of Moving Bodies"));
