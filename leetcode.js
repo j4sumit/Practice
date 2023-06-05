@@ -2453,21 +2453,47 @@
 
 // Diff Two Arrays
 
-function diffArray(arr1, arr2) {
-  const newArr = [];
-function add(firstarr, secondarr)
+// function diffArray(arr1, arr2) {
+//   const newArr = [];
+// function add(firstarr, secondarr)
+// {
+// for(let i=0; i<firstarr.length; i++)
+// {
+//   if(secondarr.indexOf(firstarr[i])==-1)
+//   {
+//     newArr.push(firstarr[i]);
+//   }
+// }
+// }
+// add(arr1,arr2);
+// add(arr2,arr1);
+//   return newArr;
+// }
+
+// console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
+
+// Seek and Destroy
+// destroyer([1, 2, 3, 1, 2, 3], 2, 3) should return [1, 1].
+
+
+function destroyer(arr) {
+  let newarr=[];
+let itemtoremove= Object.values(arguments).slice(1);
+for(let i=0; i<arr.length; i++)
 {
-for(let i=0; i<firstarr.length; i++)
-{
-  if(secondarr.indexOf(firstarr[i])==-1)
+      let flag=0;
+  for(let j=0; j<itemtoremove.length; j++)
   {
-    newArr.push(firstarr[i]);
+   if(arr[i]==itemtoremove[j])
+   {
+     flag=1;
+   }
+  }
+  if(flag==0)
+  {
+newarr.push(arr[i])
   }
 }
+  return newarr;
 }
-add(arr1,arr2);
-add(arr2,arr1);
-  return newArr;
-}
-
-console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
