@@ -2401,9 +2401,16 @@
 
 // Combine an Array into a String Using the join Method
 
-function sentensify(str) {
-let arr=str.split(/\W/);
-const res= arr.join(" ");
-return res
-}
-console.log(sentensify("May-the @force?be-with-you"));
+// function sentensify(str) {
+// let arr=str.split(/\W/);
+// const res= arr.join(" ");
+// return res
+// }
+// console.log(sentensify("May-the @force?be-with-you"));
+
+// Apply Functional Programming to Convert Strings to URL Slugs
+
+function urlSlug(title) {
+  return title.toLowerCase().trim().split(/\s+/).join("-");
+  }
+  console.log(urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone"));
