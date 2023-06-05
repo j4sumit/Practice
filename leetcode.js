@@ -2424,13 +2424,28 @@
 // console.log(checkPositive([1, 2, 3, -4, 5]));
 
 
-function add(x) {
-return function(y)
-{
-  return function(z)
+// function add(x) {
+// return function(y)
+// {
+//   return function(z)
+//   {
+//     return x+y+z;
+//   }
+// }
+// }
+// console.log(add(10)(20)(30));
+
+// Sum All Numbers in a Range
+
+function sumAll(arr) {
+  let newar=arr.sort((a,b)=>a-b)
+  let sum=0;
+  let min=newar[0];
+  let max=newar[1];
+  for(let i=min; i<=max; i++)
   {
-    return x+y+z;
+    sum = sum+ i;
   }
+  return sum;
 }
-}
-console.log(add(10)(20)(30));
+console.log(sumAll([1, 4]));
