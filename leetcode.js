@@ -1904,9 +1904,28 @@
 
 // Understand Where an Object’s Prototype Comes From
 
-function Dog(name) {
-  this.name = name;
+// function Dog(name) {
+//   this.name = name;
+// }
+// let beagle = new Dog("Snoopy");
+// let res = Dog.prototype.isPrototypeOf(beagle);
+// console.log(res);
+
+// A constructor function that inherits its prototype object from a supertype constructor function can still have its own methods in addition to inherited methods.
+
+
+function Animal() { }
+Animal.prototype.eat = function() { console.log("nom nom nom"); };
+
+function Dog() { }
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog
+
+Dog.prototype.bark = function(){
+  console.log("Woof!");
 }
-let beagle = new Dog("Snoopy");
-let res = Dog.prototype.isPrototypeOf(beagle);
-console.log(res);
+
+let beagle = new Dog();
+
+beagle.eat();
+beagle.bark();
