@@ -2475,25 +2475,10 @@
 // Seek and Destroy
 // destroyer([1, 2, 3, 1, 2, 3], 2, 3) should return [1, 1].
 
-
 function destroyer(arr) {
-  let newarr=[];
-let itemtoremove= Object.values(arguments).slice(1);
-for(let i=0; i<arr.length; i++)
-{
-      let flag=0;
-  for(let j=0; j<itemtoremove.length; j++)
-  {
-   if(arr[i]==itemtoremove[j])
-   {
-     flag=1;
-   }
-  }
-  if(flag==0)
-  {
-newarr.push(arr[i])
-  }
-}
-  return newarr;
+  let removeitem= Array.from(arguments).slice(1);
+  
+  return arr.filter(item=>  !removeitem.includes(item));
+ 
 }
 console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
