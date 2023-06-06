@@ -2475,10 +2475,19 @@
 // Seek and Destroy
 // destroyer([1, 2, 3, 1, 2, 3], 2, 3) should return [1, 1].
 
-function destroyer(arr) {
-  let removeitem= Array.from(arguments).slice(1);
+// function destroyer(arr) {
+//   let removeitem= Array.from(arguments).slice(1);
   
-  return arr.filter(item=>  !removeitem.includes(item));
+//   return arr.filter(item=>  !removeitem.includes(item));
  
+// }
+// console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+
+function spinalCase(str) {
+var regex = /\s+|_+/g;
+  str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+  console.log(str);
+  return str.replace(regex, "-").toLowerCase();
 }
-console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+
+console.log(spinalCase('thisIsSpinalTap'));
