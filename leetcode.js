@@ -2496,15 +2496,40 @@
 // - If a word begins with a consonant, take the first consonant or consonant cluster, move it to the end of the word, and add ay to it.
 // - If a word begins with a vowel, just add way at the end.
 
-function translatePigLatin(str) {
-  let consonantRegex = /^[^aeiou]+/;
-  let myConsonants = str.match(consonantRegex);
-  console.log(myConsonants);
-  return myConsonants !== null
-    ? str
-        .replace(consonantRegex, "")
-        .concat(myConsonants)
-        .concat("ay")
-    : str.concat("way")
+// function translatePigLatin(str) {
+//   let consonantRegex = /^[^aeiou]+/;
+//   let myConsonants = str.match(consonantRegex);
+//   console.log(myConsonants);
+//   return myConsonants !== null
+//     ? str
+//         .replace(consonantRegex, "")
+//         .concat(myConsonants)
+//         .concat("ay")
+//     : str.concat("way")
+// }
+// console.log(translatePigLatin("california"));
+
+// Search and Replace
+
+function myReplace(str, before, after) {
+  let index = str.indexOf(before);
+  if(str[index]=== str[index].toUpperCase())
+  {
+    after= after.charAt(0).toUpperCase()+after.slice(1);
+  }
+  else{
+    after= after.charAt(0).toLowerCase()+after.slice(1);
+  }
+  str = str.replace(before, after);
+  return str;
 }
-console.log(translatePigLatin("california"));
+console.log(myReplace("Let us go to the store", "store", "mall"));
+
+
+// var index = str.indexOf(before);
+// if (str[index] === str[index].toUpperCase()) {
+//   after = after.charAt(0).toUpperCase() + after.slice(1);
+// } else {
+//   after = after.charAt(0).toLowerCase() + after.slice(1);
+// }
+// str = str.replace(before, after);
