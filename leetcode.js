@@ -2511,19 +2511,19 @@
 
 // Search and Replace
 
-function myReplace(str, before, after) {
-  let index = str.indexOf(before);
-  if(str[index]=== str[index].toUpperCase())
-  {
-    after= after.charAt(0).toUpperCase()+after.slice(1);
-  }
-  else{
-    after= after.charAt(0).toLowerCase()+after.slice(1);
-  }
-  str = str.replace(before, after);
-  return str;
-}
-console.log(myReplace("Let us go to the store", "store", "mall"));
+// function myReplace(str, before, after) {
+//   let index = str.indexOf(before);
+//   if(str[index]=== str[index].toUpperCase())
+//   {
+//     after= after.charAt(0).toUpperCase()+after.slice(1);
+//   }
+//   else{
+//     after= after.charAt(0).toLowerCase()+after.slice(1);
+//   }
+//   str = str.replace(before, after);
+//   return str;
+// }
+// console.log(myReplace("Let us go to the store", "store", "mall"));
 
 
 // var index = str.indexOf(before);
@@ -2533,3 +2533,27 @@ console.log(myReplace("Let us go to the store", "store", "mall"));
 //   after = after.charAt(0).toLowerCase() + after.slice(1);
 // }
 // str = str.replace(before, after);
+
+// DNA Pairing
+
+function pairElement(str) {
+  function match(char){
+    switch (char) {
+      case 'A':
+      return ["A","T"];
+      case  'T':
+      return ["T","A"];
+      case 'C':
+      return ["C","G"];
+      case 'G':
+      return ["G", "C"]
+    }
+  };
+const newarr=[];
+  for(let i=0; i<str.length; i++)
+  {
+newarr.push(match(str[i]));
+  }
+  return newarr;
+}
+console.log(pairElement("GCG"));
