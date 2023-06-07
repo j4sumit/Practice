@@ -2483,11 +2483,28 @@
 // }
 // console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
 
-function spinalCase(str) {
-var regex = /\s+|_+/g;
-  str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
-  console.log(str);
-  return str.replace(regex, "-").toLowerCase();
-}
+// function spinalCase(str) {
+// var regex = /\s+|_+/g;
+//   str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+//   console.log(str);
+//   return str.replace(regex, "-").toLowerCase();
+// }
 
-console.log(spinalCase('thisIsSpinalTap'));
+// console.log(spinalCase('thisIsSpinalTap'));
+
+// Pig Latin is a way of altering English Words. The rules are as follows:
+// - If a word begins with a consonant, take the first consonant or consonant cluster, move it to the end of the word, and add ay to it.
+// - If a word begins with a vowel, just add way at the end.
+
+function translatePigLatin(str) {
+  let consonantRegex = /^[^aeiou]+/;
+  let myConsonants = str.match(consonantRegex);
+  console.log(myConsonants);
+  return myConsonants !== null
+    ? str
+        .replace(consonantRegex, "")
+        .concat(myConsonants)
+        .concat("ay")
+    : str.concat("way")
+}
+console.log(translatePigLatin("california"));
