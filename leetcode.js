@@ -2536,24 +2536,37 @@
 
 // DNA Pairing
 
-function pairElement(str) {
-  function match(char){
-    switch (char) {
-      case 'A':
-      return ["A","T"];
-      case  'T':
-      return ["T","A"];
-      case 'C':
-      return ["C","G"];
-      case 'G':
-      return ["G", "C"]
-    }
-  };
-const newarr=[];
+// function pairElement(str) {
+//   function match(char){
+//     switch (char) {
+//       case 'A':
+//       return ["A","T"];
+//       case  'T':
+//       return ["T","A"];
+//       case 'C':
+//       return ["C","G"];
+//       case 'G':
+//       return ["G", "C"]
+//     }
+//   };
+// const newarr=[];
+//   for(let i=0; i<str.length; i++)
+//   {
+// newarr.push(match(str[i]));
+//   }
+//   return newarr;
+// }
+// console.log(pairElement("GCG"));
+
+// Find Missing letter
+
+function fearNotLetter(str) {
   for(let i=0; i<str.length; i++)
   {
-newarr.push(match(str[i]));
+    if(str.charCodeAt(i)-str.charCodeAt(i-1)>1)
+    {
+      return String.fromCharCode(str.charCodeAt(i-1)+1)
+    }
   }
-  return newarr;
 }
-console.log(pairElement("GCG"));
+console.log(fearNotLetter("abce"));
