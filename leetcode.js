@@ -2582,33 +2582,51 @@
 // }
 // console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
 
-function convertHTML(str) {
-  let temp = str.split("");
-  for(let i=0; i<temp.length; i++)
+// function convertHTML(str) {
+//   let temp = str.split("");
+//   for(let i=0; i<temp.length; i++)
+//   {
+//     switch(temp[i])
+//     {
+//       case "&":
+//       temp[i]="&amp;"
+//       break;
+//       case "<":
+//       temp[i]="&lt;"
+//       break;
+//       case ">":
+//       temp[i]="&gt;"
+//       break;
+//       case ">":
+//       temp[i]="&gt;"
+//       break;
+//       case '"':
+//       temp[i]="&quot;"
+//       break;
+//       case "'":
+//       temp[i]="&apos;"
+//       break;
+//     }
+//   }
+//   temp =temp.join("");
+//   return temp;
+// }
+// console.log(convertHTML("Dolce & Gabbana"));
+
+
+function sumFibs(num) {
+let fnum=0;
+let snum=1;
+let res=0;
+while(snum<=num)
+{
+  if(snum%2!==0)
   {
-    switch(temp[i])
-    {
-      case "&":
-      temp[i]="&amp;"
-      break;
-      case "<":
-      temp[i]="&lt;"
-      break;
-      case ">":
-      temp[i]="&gt;"
-      break;
-      case ">":
-      temp[i]="&gt;"
-      break;
-      case '"':
-      temp[i]="&quot;"
-      break;
-      case "'":
-      temp[i]="&apos;"
-      break;
-    }
+res = res +snum;
   }
-  temp =temp.join("");
-  return temp;
+  snum =snum+fnum;
+  fnum=snum-fnum;
 }
-console.log(convertHTML("Dolce & Gabbana"));
+return res;
+}
+console.log(sumFibs(7));
