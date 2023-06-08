@@ -2573,11 +2573,42 @@
 
 // Sorted Union
 
-function uniteUnique(arr) {
-  let newarr = [...arguments].flat(2);
-  // console.log(newarr)
-  let res = new Set(newarr)
-  // console.log(res)
-  return Array.from(res);
+// function uniteUnique(arr) {
+//   let newarr = [...arguments].flat(2);
+//   // console.log(newarr)
+//   let res = new Set(newarr)
+//   // console.log(res)
+//   return Array.from(res);
+// }
+// console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+
+function convertHTML(str) {
+  let temp = str.split("");
+  for(let i=0; i<temp.length; i++)
+  {
+    switch(temp[i])
+    {
+      case "&":
+      temp[i]="&amp;"
+      break;
+      case "<":
+      temp[i]="&lt;"
+      break;
+      case ">":
+      temp[i]="&gt;"
+      break;
+      case ">":
+      temp[i]="&gt;"
+      break;
+      case '"':
+      temp[i]="&quot;"
+      break;
+      case "'":
+      temp[i]="&apos;"
+      break;
+    }
+  }
+  temp =temp.join("");
+  return temp;
 }
-console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+console.log(convertHTML("Dolce & Gabbana"));
