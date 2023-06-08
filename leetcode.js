@@ -2614,19 +2614,45 @@
 // console.log(convertHTML("Dolce & Gabbana"));
 
 
-function sumFibs(num) {
-let fnum=0;
-let snum=1;
-let res=0;
-while(snum<=num)
-{
-  if(snum%2!==0)
+// function sumFibs(num) {
+// let fnum=0;
+// let snum=1;
+// let res=0;
+// while(snum<=num)
+// {
+//   if(snum%2!==0)
+//   {
+// res = res +snum;
+//   }
+//   snum =snum+fnum;
+//   fnum=snum-fnum;
+// }
+// return res;
+// }
+// console.log(sumFibs(7));
+
+
+function sumPrimes(num) {
+  let sum=0;
+  for(let i=2;i<=num; i++)
   {
-res = res +snum;
+    if(checkprime(i))
+    {
+      sum=sum+i;
+    }
   }
-  snum =snum+fnum;
-  fnum=snum-fnum;
+  return sum;
 }
-return res;
+
+function checkprime(nums)
+{
+
+  for (let i = 2; i < nums; i++) {
+    if (nums % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
 }
-console.log(sumFibs(7));
+console.log(sumPrimes(10));
