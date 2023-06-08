@@ -2560,13 +2560,24 @@
 
 // Find Missing letter
 
-function fearNotLetter(str) {
-  for(let i=0; i<str.length; i++)
-  {
-    if(str.charCodeAt(i)-str.charCodeAt(i-1)>1)
-    {
-      return String.fromCharCode(str.charCodeAt(i-1)+1)
-    }
-  }
+// function fearNotLetter(str) {
+//   for(let i=0; i<str.length; i++)
+//   {
+//     if(str.charCodeAt(i)-str.charCodeAt(i-1)>1)
+//     {
+//       return String.fromCharCode(str.charCodeAt(i-1)+1)
+//     }
+//   }
+// }
+// console.log(fearNotLetter("abce"));
+
+// Sorted Union
+
+function uniteUnique(arr) {
+  let newarr = [...arguments].flat(2);
+  // console.log(newarr)
+  let res = new Set(newarr)
+  // console.log(res)
+  return Array.from(res);
 }
-console.log(fearNotLetter("abce"));
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
