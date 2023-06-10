@@ -2632,27 +2632,52 @@
 // console.log(sumFibs(7));
 
 
-function sumPrimes(num) {
-  let sum=0;
-  for(let i=2;i<=num; i++)
-  {
-    if(checkprime(i))
-    {
-      sum=sum+i;
+// function sumPrimes(num) {
+//   let sum=0;
+//   for(let i=2;i<=num; i++)
+//   {
+//     if(checkprime(i))
+//     {
+//       sum=sum+i;
+//     }
+//   }
+//   return sum;
+// }
+
+// function checkprime(nums)
+// {
+
+//   for (let i = 2; i < nums; i++) {
+//     if (nums % i === 0) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+// console.log(sumPrimes(10));
+
+// Smallest Common Multiple
+
+function smallestCommons(arr) {
+
+  const [min, max] = arr.sort((a, b) => a - b);
+  const numberDivisors = max - min + 1;
+  let upperBound = 1;
+  for (let i = min; i <= max; i++) {
+    upperBound *= i;
+  }
+  for (let multiple = max; multiple <= upperBound; multiple += max) {
+    let divisorCount = 0;
+    for (let i = min; i <= max; i++) {
+      if (multiple % i === 0) {
+        divisorCount += 1;
+      }
+    }
+    if (divisorCount === numberDivisors) {
+      return multiple;
     }
   }
-  return sum;
 }
 
-function checkprime(nums)
-{
-
-  for (let i = 2; i < nums; i++) {
-    if (nums % i === 0) {
-      return false;
-    }
-  }
-
-  return true;
-}
-console.log(sumPrimes(10));
+smallestCommons([1,5]);
