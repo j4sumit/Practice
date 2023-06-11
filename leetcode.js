@@ -2741,14 +2741,40 @@
 // console.log(res);
 
 
-function addTogether() {
-  const [first, second] = arguments;
-  if (typeof (first) === "number") {
-    if (typeof (second) === "number") return first + second;
-    if (arguments.length === 1) return (second) => addTogether(first, second);
-  }
-}
-console.log(addTogether(2, 3));
+// function addTogether() {
+//   const [first, second] = arguments;
+//   if (typeof (first) === "number") {
+//     if (typeof (second) === "number") return first + second;
+//     if (arguments.length === 1) return (second) => addTogether(first, second);
+//   }
+// }
+// console.log(addTogether(2, 3));
 // console.log(addTogether(5, undefined));
 // console.log(addTogether(5));
 // console.log(addTogether(5)(7));
+
+
+const Person = function(firstAndLast) {
+  let fullName = firstAndLast;
+
+  this.getFirstName = function() {
+    return fullName.split(" ")[0];
+  };
+  this.getLastName = function() {
+    return fullName.split(" ")[1];
+  };
+  this.getFullName = function() {
+    return fullName;
+  };
+  this.setFirstName = function(name) {
+    fullName = name + " " + fullName.split(" ")[1];
+  };
+  this.setLastName = function(name) {
+    fullName = fullName.split(" ")[0] + " " + name;
+  };
+  this.setFullName = function(name) {
+    fullName = name;
+  };
+};
+const bob = new Person("Bob Ross");
+console.log(bob.getFullName());
