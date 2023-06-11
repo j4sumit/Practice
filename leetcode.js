@@ -2728,14 +2728,27 @@
 
 // Everything Be True
 
-function truthCheck(collection, pre) {
-  let counter = 0;
-  for (let c in collection) {
-    if (collection[c].hasOwnProperty(pre) && Boolean(collection[c][pre])) {
-      counter++;
-    }
+// function truthCheck(collection, pre) {
+//   let counter = 0;
+//   for (let c in collection) {
+//     if (collection[c].hasOwnProperty(pre) && Boolean(collection[c][pre])) {
+//       counter++;
+//     }
+//   }
+//   return counter == collection.length;
+// }
+// let res = truthCheck([{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "isBot");
+// console.log(res);
+
+
+function addTogether() {
+  const [first, second] = arguments;
+  if (typeof (first) === "number") {
+    if (typeof (second) === "number") return first + second;
+    if (arguments.length === 1) return (second) => addTogether(first, second);
   }
-  return counter == collection.length;
 }
-let res = truthCheck([{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "isBot");
-console.log(res);
+console.log(addTogether(2, 3));
+// console.log(addTogether(5, undefined));
+// console.log(addTogether(5));
+// console.log(addTogether(5)(7));
