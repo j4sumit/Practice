@@ -2710,18 +2710,32 @@
 // };
 // console.log(steamrollArray([1, [2], [3, [[4]]]]));
 
-function binaryAgent(str) {
-  var biString = str.split(" ");
-  var uniString = [];
-  for (var i = 0; i < biString.length; i++) {
-    // console.log(parseInt(biString[i], 2));
-    // console.log((String.fromCharCode(parseInt(biString[i], 2))));
-    uniString.push(String.fromCharCode(parseInt(biString[i], 2)));
-  }
-    return uniString.join("");
-}
+// function binaryAgent(str) {
+//   var biString = str.split(" ");
+//   var uniString = [];
+//   for (var i = 0; i < biString.length; i++) {
+//     // console.log(parseInt(biString[i], 2));
+//     // console.log((String.fromCharCode(parseInt(biString[i], 2))));
+//     uniString.push(String.fromCharCode(parseInt(biString[i], 2)));
+//   }
+//     return uniString.join("");
+// }
 
-let result = binaryAgent(
-  "01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111"
-);
-console.log(result);
+// let result = binaryAgent(
+//   "01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111"
+// );
+// console.log(result);
+
+// Everything Be True
+
+function truthCheck(collection, pre) {
+  let counter = 0;
+  for (let c in collection) {
+    if (collection[c].hasOwnProperty(pre) && Boolean(collection[c][pre])) {
+      counter++;
+    }
+  }
+  return counter == collection.length;
+}
+let res = truthCheck([{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "isBot");
+console.log(res);
