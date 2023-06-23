@@ -1,12 +1,12 @@
-function Alternatechartoupper(str)
+function Alterchar(SirName)
 {
-let str1 = str.toLowerCase().split('');
-for(let i=0; i<str1.length; i=i+2)
+let str = SirName.toLowerCase().split();
+for(let i=0;i<str.length; i=i+2)
 {
-    str1[i] = str1[i].toUpperCase();
+    str[i] = str[i].toUpperCase();
+    
 }
-return str1.join('');
+return str.join("");
 }
 
-console.log(Alternatechartoupper("Sumit Chaurasiya"));
-//Out put - SuMiT ChAuRaSiYa
+console.log(Alterchar("chaurasiya"));
