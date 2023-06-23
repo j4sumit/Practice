@@ -1,17 +1,15 @@
-function anagram()
+function Anagram(str1, str2)
 {
-var a ="Sumit kumar chaurasiya";
-var b ="sUMIT CHAURASIYA kuMAR"
-var a1 = a.toLowerCase().split('').sort().join('').split(' ').reverse().join(' ');
-var b1 = b.toLowerCase().split('').sort().join('').split(' ').reverse().join(' ');
-if(a1 == b1)
+    let newstr1= str1.toLowerCase().split("").sort().join("").split("").reverse().join("");
+    let newstr2= str2.toLowerCase().split("").sort().join("").split("").reverse().join("");
+if(newstr1==newstr2)
 {
-    console.log("Anagram");
+    return "Anagram";
+}    
+else{
+    return "Not Anagram";
 }
-else {
-    console.log("Not anagram");
-}
-}
-anagram();
 
-// Out put:- Anagram
+}
+
+console.log(Anagram("SuMIT KumAR CHAurasiYA", "sumit kumar chaurasiya"));
