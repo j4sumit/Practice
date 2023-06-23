@@ -1,22 +1,21 @@
-function Armstrong(num)
+function ArmStrong(num)
 {
-let temp= num;
-let res=0;
-let r=0;
-while(temp>0)
+    let tempnum=num;
+    let res=0;
+    let temp;
+while(num>0)
 {
-    r=temp%10;
+    temp=num%10;
+res=res+ temp*temp*temp;
+num=Math.floor(num/10);
+}
+if(res==tempnum)
+{
+    return "ArmStrong";
+}
+else{
+    return "Not ArmStrong";
+}
+}
 
-    res =res+ r*r*r;
-    temp = Math.floor(temp/10);
-}
-if(res==num)
-{
- return true;
-}
-else {
-    return false;
-}
-}
-
-console.log(Armstrong(153));
+console.log(ArmStrong(153));
