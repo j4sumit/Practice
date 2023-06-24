@@ -1,36 +1,15 @@
-// function confirmEnding(str,target){
-//     return str.endsWith(target) //true
-//  }
-//  console.log(confirmEnding("priya","a"))
- 
-
-//  function repeatStrinNumTimes(str, num){
-//     if (num<1) return "";
-//     return str.repeat(num)
-//     }
-//     console.log(repeatStrinNumTimes("Sumit ",5))
-
-
-//     Print string n times in custom way
-    function repeatStr(str, num){
-if(num<=0) 
-return "kindly share exact number of element";
-var res ="";
-for(let i=0;i<num;i++)
+function RepeatStr(str, num)
 {
-   res = str + res;
+if(num<=0)
+{
+  return "";
 }
- return res;
-  }
-
-  console.log(repeatStr("Sumit ", 6));
-
-
-// function repeatStr(str, num){
-//    if(num<=0) 
-//    return "kindly share exact number of element";
-// if(num==1) return str;
-// return str+ repeatStr(str, num-1)
-// }
-//    console.log(repeatStr("Sumit ", 4));
-   
+if(num==0)
+{
+  return num;
+}
+else{
+  return str.repeat(num);
+}
+}
+console.log(RepeatStr("Sumit",4));
