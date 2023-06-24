@@ -1,6 +1,10 @@
-function uniquefromArrays(arr1, arr2){
-    let arr = [...arr1, ...arr2]
-    let unique = [...new Set(arr)];
-    return unique
-   }
-   console.log(uniquefromArrays([1,2,3,4], [2,3,4,5]));
+function Uniquenum(num1, num2)
+{
+let newNum= [...num1, ...num2]
+// console.log(newNum);
+let uniqueNumber=new Set([...newNum]);
+return uniqueNumber;
+}
+
+
+console.log(Uniquenum([1,2,3,5,4,7,6],[3,5,4,6,8,7]));
