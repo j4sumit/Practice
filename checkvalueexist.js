@@ -1,16 +1,16 @@
-function checkvalueexist(arr, item)
+function checkvalueexist(arr,str)
 {
-var status = "not exist";
-for(let i=0; i<arr.length; i++)
+    let Status="Not exist";
+
+    for(let i=0 ; i<arr.length; i++)
 {
-    if(arr[i]===item)
+    if(arr[i]===str)
     {
-        status = "exist"
+        Status="exist";
         break;
     }
 }
-return status;
+return Status;
 }
 
-console.log(checkvalueexist(['amit', 'sumit', 'supriya'], 'sumit'));
-
+console.log(checkvalueexist(["Sumit", "Raju", "Amit", "Shyam"],"Amt"));
