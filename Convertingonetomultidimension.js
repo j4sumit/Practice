@@ -3,7 +3,7 @@
 //     let c;
 //     while(arr.length>0){
 //       c=arr.splice(0, size);
-//       console.log(c)
+//       // console.log(c)
 //     group.push(c);
 //     }
 
@@ -15,10 +15,8 @@ function chunkArrayInGroup(arr, size){
     var group=[];
     
     while(arr.length>0){
-      // console.log(arr);  
     group.push(arr.slice(0, size))
     arr = arr.slice(size)
-    
     }
     console.log(group);
     
