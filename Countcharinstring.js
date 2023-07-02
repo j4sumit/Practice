@@ -1,14 +1,15 @@
-function countchar(String, char)
+function countchar(String, str)
 {
-    let count =0;
-for (let i=0; i<String.length; i++)
-{
-    if(String.charAt(i)== char)
+    let count = 0;
+    for(let i=0; i<String.length; i++)
     {
-        count++;
+        if(String.charAt(i)==str)
+        {
+            count++;
+        }
     }
-}
-return count;
+    return count;
 }
 
-console.log(countchar("sumiitaaa", "a"));
+
+console.log(countchar("Sumit chaurasiya", "i"));
