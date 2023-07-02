@@ -13,4 +13,4 @@ function checkvalueexist(arr,str)
 return Status;
 }
 
-console.log(checkvalueexist(["Sumit", "Raju", "Amit", "Shyam"],"Amt"));
+console.log(checkvalueexist(["Sumit", "Raju", "Amit", "Shyam"],"Amit"));
