@@ -2753,7 +2753,7 @@
 // console.log(addTogether(5));
 // console.log(addTogether(5)(7));
 
-let bikes =["yamaha","bajaj","honda","tvs"];
+let bikes =["yamaha","bajaj","honda","tvs","bajaj"];
 // console.log(bikes);
 // console.log(bikes.toString());
 // console.log(bikes.join("-"));
@@ -2767,15 +2767,35 @@ let bike2= ["splender","apche"];
 // let bike3= [...bikes, ...bike2]
 let bike3 = bikes.concat(bike2)
 // console.log(bike3.sort());
-let num = [210,12,11,10,112,34,43,21,32,23]
+let num = [6,12,12,10,112,34,44,22,32,214]
 // console.log(num.sort((a,b)=> {return a-b}) );
 // console.log(num.splice(2,3,"num1", "num2"));
 // console.log(num.splice(2,3));
 // console.log(num.slice(2,5));
 // console.log(num.sort((a,b)=> {return a-b}).reverse());
 let str ="Sumit Chaurasiya"
-console.log(Array.isArray(str));
-console.log(Array.isArray(num));
-console.log(str.indexOf("i",5));
-console.log(str.lastIndexOf("i"));
+// console.log(Array.isArray(str));
+// console.log(Array.isArray(num));
+// console.log(str.indexOf("b",5));
+// console.log(str.lastIndexOf("i"));
+// console.log(bikes.find((str)=> str ==="bajaj"))
+// console.log(num.find((nums) => nums >500))
+// console.log(num.findIndex((num1)=> num1>30  ));
+// console.log(num.includes(23))
+// const numbers= num.entries();
+// console.log(numbers)
+// for (let i of numbers)
+// {
+//   console.log(i)
+// }
 
+// console.log(num.every((num1)=> {return num1%2==0}))
+// console.log(num.some((num1)=> num1%2!==0))
+// console.log(num.fill(1000,2,5))
+// let strArry =["Sumit", "Chaurasiya","kumar","appble","banana"]
+// console.log(strArry.valueOf());
+// num.forEach((nums, i, arr)=> {arr[i] = nums*10} )
+// console.log(num.filter((num1)=> num1>20))
+// console.log(num.reduce((acc, curr)=> acc+curr))
+// console.log(num.reduce((acc, curr)=> acc+curr, 5))
+console.log(Array.from("Sumit"));
