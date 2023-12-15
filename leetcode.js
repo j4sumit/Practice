@@ -2753,28 +2753,29 @@
 // console.log(addTogether(5));
 // console.log(addTogether(5)(7));
 
+let bikes =["yamaha","bajaj","honda","tvs"];
+// console.log(bikes);
+// console.log(bikes.toString());
+// console.log(bikes.join("-"));
+// console.log(bikes.pop());
+// console.log(bikes.push("New Vehicle","another Vehicle"));
+// console.log(bikes.shift());
+// console.log(bikes.unshift("added at start"));
+// console.log(delete bikes[0]);
+// console.log(bikes);
+let bike2= ["splender","apche"];
+// let bike3= [...bikes, ...bike2]
+let bike3 = bikes.concat(bike2)
+// console.log(bike3.sort());
+let num = [210,12,11,10,112,34,43,21,32,23]
+// console.log(num.sort((a,b)=> {return a-b}) );
+// console.log(num.splice(2,3,"num1", "num2"));
+// console.log(num.splice(2,3));
+// console.log(num.slice(2,5));
+// console.log(num.sort((a,b)=> {return a-b}).reverse());
+let str ="Sumit Chaurasiya"
+console.log(Array.isArray(str));
+console.log(Array.isArray(num));
+console.log(str.indexOf("i",5));
+console.log(str.lastIndexOf("i"));
 
-const Person = function(firstAndLast) {
-  let fullName = firstAndLast;
-
-  this.getFirstName = function() {
-    return fullName.split(" ")[0];
-  };
-  this.getLastName = function() {
-    return fullName.split(" ")[1];
-  };
-  this.getFullName = function() {
-    return fullName;
-  };
-  this.setFirstName = function(name) {
-    fullName = name + " " + fullName.split(" ")[1];
-  };
-  this.setLastName = function(name) {
-    fullName = fullName.split(" ")[0] + " " + name;
-  };
-  this.setFullName = function(name) {
-    fullName = name;
-  };
-};
-const bob = new Person("Bob Ross");
-console.log(bob.getFullName());
