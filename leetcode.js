@@ -2903,4 +2903,119 @@ function wordExist(Arr, str)
     }
     return status;
 }
-console.log(wordExist(["Sumit", "Raju", "Amit", "Shyam"],"Sumit"));
+// console.log(wordExist(["Sumit", "Raju", "Amit", "Shyam"],"Sumit"));
+
+//CleanText function to remove special character
+function cleanText(str)
+{
+    return str.replace(/[^A-Z a-z""]/ig,"");
+}
+const sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`;
+// console.log(cleanText(sentence));
+
+
+// closure
+function outer()
+{
+    let a=10;
+    function inner ()
+    {
+return `value of a from outer  ${a}`
+    }
+    return inner;
+}
+// let res=outer()
+// console.log(res());
+// console.log(outer()());
+
+//One to Multidimention Array
+
+function oneToMultiDiementionsArra(arr, num)
+{
+    let MulArr=[];
+   while(arr.length>=num)
+   {
+    MulArr.push(arr.slice(0,num))
+    arr=arr.slice(num);
+   }
+   return MulArr;
+}
+
+// console.log (oneToMultiDiementionsArra(['a','b','c','d','e','f'],2)) 
+
+//Count number of Character in String
+function countChar(Str,char)
+{
+    let count=0;
+    for(let i=0; i<Str.length;i++)
+    {
+        if(Str.charAt(i)===char)
+        {
+            count++
+        }
+    }
+    return count;
+}
+// console.log(countChar("Sumit Kumar", 'i'));
+
+//Count Negative Number in array
+function countNegativenum(num)
+{
+    let negativeCount=0;
+    for(let i=0; i<num.length; i++)
+    {
+        for (let j=0; j<num[i].length; j++)
+        { 
+            if(num[i][j]<1)
+            {
+                negativeCount++
+            }
+        }
+    }
+    return negativeCount;
+}
+
+// console.log(countNegativenum([[1,-1],[-1,-1]]))
+
+//Count number of vowels
+function countVowels(str)
+{
+let vowels=['a','e','i','o','u'];
+let count=0;
+let arr=[]
+for(let i=0; i<str.length; i++)
+{
+    if(vowels.includes(str[i].toLowerCase()))
+    {
+        arr.push(str[i]);
+        count++
+    }
+}
+console.log("total vowels", arr);
+return count;
+}
+// console.log(countVowels("Sumit chaurasiya"));
+
+//Currying Function
+function Sum(a)
+{
+return function(b){
+    return function(c)
+    {
+        return a+b+c;
+    }
+}
+}
+// console.log(Sum(10)(15)(20));
+
+function fullName(fname)
+{
+    return function(sName)
+    {
+        return function(lName)
+        {
+            return `${fname} ${sName} ${lName}`
+        }
+    }
+}
+// console.log(fullName("sumit")("Kumar")("Chaurasiya"))
