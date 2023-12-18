@@ -3019,3 +3019,116 @@ function fullName(fname)
     }
 }
 // console.log(fullName("sumit")("Kumar")("Chaurasiya"))
+
+
+function removeDuplicate(arr)
+{
+let newarr=[];
+for(let i =0; i<arr.length; i++)
+{
+    if(newarr.indexOf(arr[i])==-1)
+    {
+        newarr.push(arr[i])
+    }
+}
+return newarr.sort((a,b)=> a-b);
+}
+// console.log(removeDuplicate([1,6,3,5,4,6,3,5,6,4,5,8,4,10,12,31]));
+
+function countEvenDigitNum(arr)
+{
+    let count=0;
+for(let i=0; i<arr.length;i++)
+{
+    let digit = arr[i].toString().length;
+    if(digit%2==0)
+    {
+        count++;
+    }
+}
+return count;
+}
+// console.log(countEvenDigitNum([12,345,2,6,7896,56,48]));
+
+function fibonaci(num)
+{
+    let num1=0;
+    let num2=1;
+    let sum=0;
+    let arr=[];
+    for(let i=0;i<=num; i++)
+    {
+        arr.push(num1);
+        sum=num1+num2;
+        num1=num2;
+        num2=sum;
+    }
+    return arr;
+}
+// console.log(fibonaci(10));
+
+const evenOddParity =(arr)=>{
+    let even=[];
+    let odd=[];
+    for(let i=0; i<arr.length;i++)
+    {
+//         if(arr[i]%2===0){
+// even.push(arr[i])
+//         }
+//         else{
+//             odd.push(arr[i])
+//         }
+{arr[i]%2===0 ? even.push(arr[i]) : odd.push(arr[i])}
+    }
+    console.log("even",even)
+    console.log("odd",odd);
+    return even.concat(odd);
+}
+// console.log(evenOddParity([1,2,3,4,5,6,7,8,9]));
+
+//pair whose sum i 0
+function firstpair(arr)
+{
+for(let i=0; i<arr.length;i++)
+{
+    for(let j=i+1; j<arr.length;j++)
+    {
+        if(arr[i]+arr[j]===0)
+        {
+            return( [arr[i], arr[j]])
+        }
+    }
+}
+}
+// console.log(firstpair([11,-4,5,11,6,-5,-4,12,10]));
+
+//index of number in given array
+
+function indexOfChar(arr,num)
+{
+for(let i=0; i<arr.length;i++)
+{
+    if(arr[i]===num)
+    {
+        return `${num} found at index ${i}`
+    }
+}
+}
+// console.log(indexOfChar([12,32,13,43,54,23,12,23,54], 54))
+
+function largestArr(arr)
+{
+    let maxarr=[0,0,0,0];
+    for(let i=0; i<arr.length;i++)
+    {
+        for(let j=0;j<arr[i].length;j++)
+        {
+            if(arr[i][j]>maxarr[i])
+            {
+                maxarr[i]=arr[i][j];
+            }
+        }
+    }
+return maxarr;
+}
+console.log(largestArr([[1,2,3,4],[5,6,7,9],[45,76,2,1],[89,90,87,9]]))
