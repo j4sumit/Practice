@@ -3116,6 +3116,7 @@ for(let i=0; i<arr.length;i++)
 }
 // console.log(indexOfChar([12,32,13,43,54,23,12,23,54], 54))
 
+//largest 2Delement
 function largestArr(arr)
 {
     let maxarr=[0,0,0,0];
@@ -3131,4 +3132,105 @@ function largestArr(arr)
     }
 return maxarr;
 }
-console.log(largestArr([[1,2,3,4],[5,6,7,9],[45,76,2,1],[89,90,87,9]]))
+// console.log(largestArr([[1,2,3,4],[5,6,7,9],[45,76,2,1],[89,90,87,9]]))
+
+const largestpairsum =(arr)=>{
+    let sortedArr=arr.sort((a,b)=> b-a)
+    return sortedArr[0]+sortedArr[1]
+}
+// console.log(largestpairsum([9,7,15,11,8,4,5,6,1,2,3]))
+
+//longest common Sting 
+function longestcommonstring(arr)
+{
+    let sortedArr = arr.sort();
+    let i=0;
+    while(sortedArr[0].length>0 && sortedArr[0].charAt(i)===sortedArr[sortedArr.length-1].charAt(i))
+    {
+        i++
+    }
+    return sortedArr[0].slice(0,i)
+}
+// console.log(longestcommonstring(["Sunmit", "Sunressh", "Sunmit", "Sunkesh", "Sur"]))
+
+//largest word from string
+
+function largestWord(str)
+{
+    let arr =str.split(" ");
+    let largest= arr[8];
+for(let i=0 ; i<arr.length; i++)
+{
+    if(arr[i].length>largest.length)
+    {
+        largest= arr[i];
+    }
+}
+return largest;
+}
+// console.log(largestWord("My name is sumit chaurasiya currentlyyy persuing frontend trainging from soal"))
+
+// function maxArr(arr)
+// {
+//     let  maxA=-Infinity;
+//     let newarr = arr.flat(3);
+//     for(let i=0 ; i<newarr.length;i++)
+//     {
+//         if(newarr[i]>maxA)
+//         {
+//             maxA=newarr[i];
+//         }
+//     }
+//     return maxA;
+// }
+// console.log(maxArr([1, -5,200,-12, [15, [23], [21, 12]], [100]]))
+
+//maxArr Element using isArray method
+function maxArr(arr)
+{
+let max=-Infinity;
+let nestedMax=[];
+for(let i=0 ; i<arr.length; i++)
+{
+    if(Array.isArray(arr[i]))
+    {
+        nestedMax=maxArr(arr[i])
+        if(nestedMax>max)
+        {
+            max=nestedMax;
+        }
+    }
+    else if(arr[i]>max)
+    {
+max=arr[i];
+    }
+}
+return max;
+}
+// console.log(maxArr([1, 2, [150, [23], [5, 12]], [100]]));
+
+
+function minArr(arr)
+{
+let min=Infinity;
+let nestedMin=[];
+for(let i=0; i<arr.length;i++)
+{
+    if(Array.isArray(arr[i]))
+    {
+        nestedMin=minArr(arr[i])
+        if(nestedMin<min){
+            min=nestedMin;
+        }
+    }
+    else if(arr[i]<min)
+    {
+        min=arr[i];
+    }
+}
+return min;
+}
+
+console.log(minArr([1, 2, [150, [23],-2,-5, [5, 12]], [100]]));
+
+
