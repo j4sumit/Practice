@@ -2811,6 +2811,9 @@ let bikes =["yamaha","bajaj","honda","tvs","bajaj"];
 // const obj= {x,y}
 // console.log(obj)
 
+
+//Anagram String
+
 function Anagram(str1, str2)
 {
 let string1 =str1.toLowerCase().split("").sort().join("").split("").reverse().join("");
@@ -2826,7 +2829,7 @@ else{
 // console.log(Anagram("Sumit","sumiTa"));
 // console.log(Anagram("Sumit","suTmi"));
 
-
+//ArmStrong program
 function ArmStrong(num)
 {
 let tempnum =num;
@@ -2846,4 +2849,58 @@ else{
     return "Number is not ArmStrong";
 }
 }
-console.log(ArmStrong(153));
+// console.log(ArmStrong(153));
+
+//Unique number from array
+function Uniquenum(num1, num2)
+{
+    let Number= [...num1, ...num2];
+    const uniqueNum= new Set([...Number].sort())
+    return uniqueNum;
+}
+
+// console.log(Uniquenum([1,2,3,5,4,7,6],[3,5,4,6,8,7]));
+
+//Promise program
+function checkNumWithPromise(num)
+{
+    let promise= new Promise((resolve, reject) =>{
+        if(num%2==0)
+        {
+            resolve("Num is even")
+        }
+        else{
+            reject("num is odd");
+        }
+    });
+    return promise;
+}
+
+// checkNumWithPromise(11).then((res)=>{console.log(res)}, (rej)=>{ console.log(rej)})
+
+//callback Function
+function sum(a, b, callback )
+{
+    let Sum= a+b;
+   return callback(Sum);
+}
+
+function sumInfo(data)
+{
+return `Total sum is ${data}`
+}
+
+// console.log(sum(10,5, sumInfo));
+
+//Given word Exist or not
+function wordExist(Arr, str)
+{
+    let status ="Not Exist";
+    for(let i=0; i<Arr.length; i++)
+    {
+        if(Arr[i]===str)
+        status="Exist";
+    }
+    return status;
+}
+console.log(wordExist(["Sumit", "Raju", "Amit", "Shyam"],"Sumit"));
