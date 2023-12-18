@@ -2763,17 +2763,17 @@ let bikes =["yamaha","bajaj","honda","tvs","bajaj"];
 // console.log(bikes.unshift("added at start"));
 // console.log(delete bikes[0]);
 // console.log(bikes);
-let bike2= ["splender","apche"];
+// let bike2= ["splender","apche"];
 // let bike3= [...bikes, ...bike2]
-let bike3 = bikes.concat(bike2)
+// let bike3 = bikes.concat(bike2)
 // console.log(bike3.sort());
-let num = [6,12,12,10,112,34,44,22,32,214]
+// let num = [6,12,12,10,112,34,44,22,32,214]
 // console.log(num.sort((a,b)=> {return a-b}) );
 // console.log(num.splice(2,3,"num1", "num2"));
 // console.log(num.splice(2,3));
 // console.log(num.slice(2,5));
 // console.log(num.sort((a,b)=> {return a-b}).reverse());
-let str ="Sumit Chaurasiya"
+// let str ="Sumit Chaurasiya"
 // console.log(Array.isArray(str));
 // console.log(Array.isArray(num));
 // console.log(str.indexOf("b",5));
@@ -2798,4 +2798,52 @@ let str ="Sumit Chaurasiya"
 // console.log(num.filter((num1)=> num1>20))
 // console.log(num.reduce((acc, curr)=> acc+curr))
 // console.log(num.reduce((acc, curr)=> acc+curr, 5))
-console.log(Array.from("Sumit"));
+// console.log(Array.from("Sumit"));
+
+// const obj1= {a:1}
+// const obj2 ={b:2}
+// const obj3 = Object.assign({},obj1, obj2)
+// console.log(obj1)
+// console.log(obj2)
+// console.log(obj3)
+// const x= 2;
+// const y=3;
+// const obj= {x,y}
+// console.log(obj)
+
+function Anagram(str1, str2)
+{
+let string1 =str1.toLowerCase().split("").sort().join("").split("").reverse().join("");
+let string2= str2.toLowerCase().split("").sort().join("").split("").reverse().join("");
+if(string1===string2)
+{
+    return "Given String is Anagram"
+}
+else{
+    return "Given String is not Anagram"
+}
+}
+// console.log(Anagram("Sumit","sumiTa"));
+// console.log(Anagram("Sumit","suTmi"));
+
+
+function ArmStrong(num)
+{
+let tempnum =num;
+let res =0;
+let temp;
+while (num>0)
+{
+    temp =num%10;
+    res =res+temp*temp*temp;
+    num = Math.floor(num/10);
+}
+if(res===tempnum)
+{
+    return "Number is Armstrong";
+}
+else{
+    return "Number is not ArmStrong";
+}
+}
+console.log(ArmStrong(153));
