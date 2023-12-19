@@ -3231,6 +3231,79 @@ for(let i=0; i<arr.length;i++)
 return min;
 }
 
-console.log(minArr([1, 2, [150, [23],-2,-5, [5, 12]], [100]]));
+// console.log(minArr([1, 2, [150, [23],-2,-5, [5, 12]], [100]]));
+//Max repeating character in String
+function maxRepeating(str)
+{
+    let count=0;
+    let maxChar;
+    for(let i=0; i<str.length;i++)
+    {
+        let tempcount=1;
+        for(let j=i+1; j<str.length;j++)
+        {
+            if(str[i]===str[j])
+            {
+                tempcount++;
+            }
+        }
+        if(tempcount>count)
+        {
+    maxChar=str[i];
+    count= tempcount;
+        }
+    }
+    console.log(maxChar, count);
+}
+
+// maxRepeating("arrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrraaabbaaccccccccccccccccccde");
+
+//Findout Missing number
+function missingarrayitem(arr){
+    const missingArr=[];
+    for (let i=1; i<arr[arr.length-1];i++)
+    {
+        if(arr.indexOf(i)===-1)
+        {
+            missingArr.push(i)
+        }
+    }
+    return missingArr;
+}
+// console.log(missingarrayitem([1,9,16,36]));
+
+//nth smallest or largest number
+function nthSmallestLargest(arr, loc)
+{
+    let sortedArr= arr.sort((a,b) => a-b)
+    console.log("sortedArr",sortedArr);
+console.log(`${loc}rd Smallest num is ${sortedArr[loc-1]} and ${loc}rd largest num is ${sortedArr[sortedArr.length-loc]}`)
+}
+
+// nthSmallestLargest([2,1,4,3,6,5,7], 3)
+
+
+// 
+function isPalindrome(str)
+{
+    let newstr= str.replace(/[^A-Z0-9]/ig,"").toLowerCase();
+    let revStr= newstr.split("").reverse().join("")
+    console.log(newstr);
+    console.log(revStr);
+    return newstr===revStr;
+}
+
+console.log(isPalindrome("mad@%^%$@#ad"));
+
+
+
+
+
+
+
+
+
+
+
 
 
