@@ -3283,7 +3283,7 @@ console.log(`${loc}rd Smallest num is ${sortedArr[loc-1]} and ${loc}rd largest n
 // nthSmallestLargest([2,1,4,3,6,5,7], 3)
 
 
-// 
+// Palindrom by removing special character
 function isPalindrome(str)
 {
     let newstr= str.replace(/[^A-Z0-9]/ig,"").toLowerCase();
@@ -3292,18 +3292,92 @@ function isPalindrome(str)
     console.log(revStr);
     return newstr===revStr;
 }
+// console.log(isPalindrome("mad@%^%$@#ad"));
 
-console.log(isPalindrome("mad@%^%$@#ad"));
+//prime number
+function primeNumber(num){
+    for(let i=2; i<num; i++)
+    {
+        if(num%i===0)
+        {
+            return `${num} is not prime number`;
+        }
+    }
+    return `${num} is prime number`;
+}
+// console.log(primeNumber(37));
+
+//Promise example
+const isEvenOdd=(num)=>{
+let promise = new Promise((resolve,reject)=>{
+    if(num%2===0)
+    {
+        resolve("num is even");
+    }
+    else{
+        reject("num is odd");
+    }
+})
+return promise;
+}
+// isEvenOdd(24).then((res)=> console.log(res), (res)=> console.log(res)).catch((err)=> console.log(err));
+
+//remove Element from array
+const removeEle=(arr, item)=>{
+// return arr.filter(data=> data!= item)
+for(let i=0; i<arr.length;i++)
+{
+if(arr[i]===item)
+{
+    arr.splice(i,1)
+}
+}
+return arr;
+}
+// console.log(removeEle([1, 2, 3, 4, 5, 6, 7, 8, 9, 0],4));
+
+//Remove Duplicat item from array
+
+const removeDuplicate1=(arr)=>{
+let newarr= arr.filter((item,index,arr)=> arr.indexOf(item)==index )
+return newarr;
+}
+// console.log(removeDuplicate1([1, 2,3,1,2,4, 5, 6, 7, 8,1, 2,4, 5, 6, 7, 8,11,43,543,343,234]))
+
+//Average of num using spread operator
+
+const average=(...number)=>{
+    let sum=0;
+    let c=0;
+for(let num of number)
+{
+sum=sum+num;
+c++
+}
+
+return sum/c;
+}
+// console.log(`Avereage of 1, 2,3,1,2,4 is ${average(1, 2,3,1,2,4)}`)
 
 
+const isEvenOddAsynAwait= async (num)=>{
+    return new Promise((resolve, reject) => {
+        if (num % 2 === 0) {
+            resolve("num is even=======");
+        } else {
+            reject("num is odd---");
+        }
+    });
+    }
 
 
-
-
-
-
-
-
-
-
-
+   const calculation=async() =>{
+    try{
+        const result= await isEvenOddAsynAwait(14);
+        console.log("result",result);
+    }
+    catch(err){
+        console.log(err);
+    }
+   }
+   calculation();
