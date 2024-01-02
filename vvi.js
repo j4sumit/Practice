@@ -61,5 +61,15 @@ if(num%2===0)
 })
 return promise;
 }
+// checkNumWithPromise(12).then((res)=>{console.log(res)}, ((rej)=>{console.log(rej)}));
+// checkNumWithPromise(12).then((res)=>{console.log(res)}).catch((rej)=>{console.log(rej)});
 
-checkNumWithPromise(12).then((res)=>{console.log(res)}).catch((rej)=>{console.log(rej)});
+//5.    Callback Function
+function callbackFun(a,b,callback){
+let c= a+b;
+return callback(c);
+}
+function res1(data){
+    console.log(`Sum of total is ${data}`);
+}
+callbackFun(5,10,res1);

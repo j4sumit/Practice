@@ -2876,7 +2876,7 @@ function checkNumWithPromise(num)
     return promise;
 }
 
-// checkNumWithPromise(11).then((res)=>{console.log(res)}, (rej)=>{ console.log(rej)})
+checkNumWithPromise(12).then((res)=>{console.log(res)}, (rej)=>{ console.log(rej)})
 
 //callback Function
 function sum(a, b, callback )
@@ -3380,4 +3380,4 @@ const isEvenOddAsynAwait= async (num)=>{
         console.log(err);
     }
    }
-   calculation();
+//    calculation();
