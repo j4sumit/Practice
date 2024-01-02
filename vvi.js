@@ -45,4 +45,21 @@ function Uniquenum(arr1, arr2){
     return Array.from(newarr);
     }
 
-console.log(Uniquenum([1,2,3,5,4,7,6],[3,5,4,6,8,7]));
+// console.log(Uniquenum([1,2,3,5,4,7,6],[3,5,4,6,8,7]));
+
+
+//4.   Promise
+function checkNumWithPromise(num)
+{
+let promise  = new Promise((resolve,reject)=>{
+if(num%2===0)
+{
+    resolve("number is Even");
+}else{
+    reject("Number is odd")
+}
+})
+return promise;
+}
+
+checkNumWithPromise(12).then((res)=>{console.log(res)}).catch((rej)=>{console.log(rej)});
