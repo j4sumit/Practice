@@ -32,4 +32,17 @@ if(temp===num){
     return "Number is not ArmStrong";
 }
 }
-console.log(ArmStrong(153));
+// console.log(ArmStrong(153));
+
+//3 .Unique number
+// function Uniquenum(arr1, arr2){
+// let newarr = [...arr1,...arr2]
+// let res=newarr.filter((item,index,arr)=>arr.indexOf(item)===index)
+// return res;
+// }
+function Uniquenum(arr1, arr2){
+    let newarr = new Set([...arr1,...arr2])
+    return Array.from(newarr);
+    }
+
+console.log(Uniquenum([1,2,3,5,4,7,6],[3,5,4,6,8,7]));
