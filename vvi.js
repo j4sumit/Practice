@@ -142,5 +142,27 @@ arr=arr.slice(num);
 }
 return newarr;
 }
-console.log(arrayConversion([1,2,3,4,5,6,7,8,9,0,11,12,13,14],2))
+// console.log(arrayConversion([1,2,3,4,5,6,7,8,9,0,11,12,13,14],2))
+
+// 10.  Count character is string
+function countChar(str, char){
+    // let count=0;
+    // for(let c of str)
+    // {
+    //     if(c===char)
+    //     {
+    //         count++;
+    //     }
+    // }
+    // return count;
+let res=[...str].reduce((acc,cur)=>{
+    if(cur===char){
+    acc++;
+}
+return acc;
+},0)
+return res;
+}
+console.log(countChar("Sumit Kumavvvvvr", 'v'))
+
 
