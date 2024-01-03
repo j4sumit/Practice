@@ -117,7 +117,7 @@ function removeSpecialChar(str){
 // const sentence = `%I $am@% 999 a %tea@cher%, &and& 123 I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`;
 // console.log(removeSpecialChar(sentence))
 
-//8.    Closure
+//8.    Closure example
 function parent()
 {
 let name="Sumit"
@@ -129,5 +129,18 @@ return child;
 }
 
 let res=parent();
-console.log(res)
-console.log(res());
+// console.log(res)
+// console.log(res());
+
+//9.    Converting One Dimension array to MultiDimension array
+
+function arrayConversion(arr,num){
+    let newarr=[];
+while(arr.length>=num){
+newarr.push(arr.slice(0,num));
+arr=arr.slice(num);
+}
+return newarr;
+}
+console.log(arrayConversion([1,2,3,4,5,6,7,8,9,0,11,12,13,14],2))
+
