@@ -72,4 +72,25 @@ return callback(c);
 function res1(data){
     console.log(`Sum of total is ${data}`);
 }
-callbackFun(5,10,res1);
+// callbackFun(5,10,res1);
+
+function duplicatCountInArr(arr)
+{
+let hashMap={};
+arr.forEach((item)=>{
+    if(hashMap[item]){
+        hashMap[item]++;
+    }else{
+        hashMap[item]=1;
+    }
+})
+console.log(hashMap);
+for(let key in hashMap){
+if(hashMap[key]>1)
+{
+    return key;
+}
+}
+}
+console.log(duplicatCountInArr([19,7,12,32,12,4,3,5,3,4,7]))
+
