@@ -72,8 +72,9 @@ return callback(c);
 function res1(data){
     console.log(`Sum of total is ${data}`);
 }
-// callbackFun(5,10,res1);
+//  callbackFun(5,10,res1);
 
+//6.    Duplicate array Element
 function duplicatCountInArr(arr)
 {
 let hashMap={};
@@ -92,5 +93,17 @@ if(hashMap[key]>1)
 }
 }
 }
-console.log(duplicatCountInArr([19,7,12,32,12,4,3,5,3,4,7]))
+// console.log(duplicatCountInArr([19,7,12,32,12,4,3,5,3,4,7]))
 
+//6.    Duplicate word in String
+function wordExist(arr, str){
+    let status ="Duplicate False"
+    for (let data of arr){
+        if(data===str)
+        {
+            status="Duplicate true"
+        }
+    }
+    return status;
+}
+console.log(wordExist(["Sumit", "Raju", "Amit", "Shyam"],"Sum12it"));
