@@ -106,4 +106,13 @@ function wordExist(arr, str){
     }
     return status;
 }
-console.log(wordExist(["Sumit", "Raju", "Amit", "Shyam"],"Sum12it"));
+// console.log(wordExist(["Sumit", "Raju", "Amit", "Shyam"],"Sum12it"));
+
+//7     Remove Special character from String
+
+function removeSpecialChar(str){
+    return str.replace(/[^a-z ]/gi,"");
+    
+}
+const sentence = `%I $am@% 999 a %tea@cher%, &and& 123 I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`;
+console.log(removeSpecialChar(sentence))
