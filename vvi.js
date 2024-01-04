@@ -163,6 +163,25 @@ return acc;
 },0)
 return res;
 }
-console.log(countChar("Sumit Kumavvvvvr", 'v'))
+// console.log(countChar("Sumit Kumavvvvvr", 'v'))
+
+//11.   Count  negative number
+function countNegativenum(arr){
+let count =0;
+for(let i=0; i<arr.length;i++)
+{
+    for  (let j=0; j<arr[i].length; j++)
+    {
+        if (arr[i][j]<0)
+        {
+            count++;
+        }
+    }
+}
+return count;
+}
+
+console.log(countNegativenum([[-1,1],[1,1]]))
+
 
 
