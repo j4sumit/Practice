@@ -246,3 +246,20 @@ return arr;
 }
 console.log(fibonaci(10))
 
+//17. Even odd Parity
+function evenOddParity(arr){
+let evenData=[];
+let oddData=[];
+for(let num of arr){
+    if(num%2===0){
+        evenData.push(num)
+    }else{
+        oddData.push(num);
+    }
+}
+console.log(`even datas are ${evenData}`)
+console.log(`odd datas are ${oddData}`)
+}
+
+evenOddParity([1,2,3,4,5,6,7,8,9])
+
