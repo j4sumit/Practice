@@ -244,7 +244,7 @@ while(num>=0){
 }
 return arr;
 }
-console.log(fibonaci(10))
+// console.log(fibonaci(10))
 
 //17. Even odd Parity
 function evenOddParity(arr){
@@ -261,5 +261,17 @@ console.log(`even datas are ${evenData}`)
 console.log(`odd datas are ${oddData}`)
 }
 
-evenOddParity([1,2,3,4,5,6,7,8,9])
-
+// evenOddParity([1,2,3,4,5,6,7,8,9])
+//18.   Identify first pari whose sum is 0
+function firstpair(arr){
+for(let i=0; i<arr.length;i++)
+{
+    for (let j=i+1; j<arr.length;j++)
+    {
+        if(arr[i]+arr[j]===0){
+            return `First pair is ${arr[i]} ${arr[j]}`
+        }
+    }
+}
+}
+console.log(firstpair([11,-4,5,11,6,-5,4,12,10]))
