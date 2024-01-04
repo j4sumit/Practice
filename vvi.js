@@ -209,13 +209,13 @@ function currying(num1){
 }
 // console.log(currying(5)(3)(9))
 
-//Remove Duplicate array item
+//14.   Remove Duplicate array item
 function removeDuplicate(arr){
 return arr.filter((item,index,arr)=> arr.indexOf(item)===index);
 }
 // console.log(removeDuplicate([1,6,3,5,4,6,3,5,6,4,5,8,4,10,12,31]))
 
-// countEvenDigitNum
+//15.    countEvenDigitNum
 
 function countEvenDigitNum(arr){
 let count=0;
@@ -227,4 +227,22 @@ if(digit%2===0){
 }
 return count;
 }
-console.log(countEvenDigitNum([12,345,2,6,7861,56,48,2342,4435]))
+// console.log(countEvenDigitNum([12,345,2,6,7861,56,48,2342,4435]))
+
+//16.   Fibonacii Series
+function fibonaci(num){
+let num1=0;
+let num2=1;
+let arr=[];
+let sum=0;
+while(num>=0){
+    arr.push(num1);
+    sum=num1+num2;
+    num1=num2;
+    num2=sum;
+    num--;
+}
+return arr;
+}
+console.log(fibonaci(10))
+

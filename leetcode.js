@@ -3065,7 +3065,7 @@ function fibonaci(num)
     }
     return arr;
 }
-// console.log(fibonaci(10));
+console.log(fibonaci(10));
 
 const evenOddParity =(arr)=>{
     let even=[];
