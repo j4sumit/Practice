@@ -196,8 +196,35 @@ res.push(char);
 }
 return `vowels are ${res} and total length is ${count}`
 }
-console.log(countVowels("Sumit Achaurasiya"))
+// console.log(countVowels("Sumit Achaurasiya"))
 
+//13.   Currying Function
+function currying(num1){
+    return function(num2){
+        return function(num3){
+            return num1*num2*num3;
+        }
+    }
 
+}
+// console.log(currying(5)(3)(9))
 
+//Remove Duplicate array item
+function removeDuplicate(arr){
+return arr.filter((item,index,arr)=> arr.indexOf(item)===index);
+}
+// console.log(removeDuplicate([1,6,3,5,4,6,3,5,6,4,5,8,4,10,12,31]))
 
+// countEvenDigitNum
+
+function countEvenDigitNum(arr){
+let count=0;
+for(let num of arr){
+    digit =num.toString().length;
+if(digit%2===0){
+    count++
+}
+}
+return count;
+}
+console.log(countEvenDigitNum([12,345,2,6,7861,56,48,2342,4435]))
