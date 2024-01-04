@@ -180,8 +180,24 @@ for(let i=0; i<arr.length;i++)
 }
 return count;
 }
+// console.log(countNegativenum([[-1,1],[1,1]]))
 
-console.log(countNegativenum([[-1,1],[1,1]]))
+//12.   Count number of vowels in String
+function countVowels(str){
+let count=0;
+let res=[];
+let vowels =['a','e','i','o','u'];
+for (let char of str)
+{
+   if(vowels.includes(char.toLowerCase())){
+count++;
+res.push(char);
+   }
+}
+return `vowels are ${res} and total length is ${count}`
+}
+console.log(countVowels("Sumit Achaurasiya"))
+
 
 
 
